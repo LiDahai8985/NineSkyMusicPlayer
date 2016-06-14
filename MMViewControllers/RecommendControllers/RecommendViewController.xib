@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommendViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recommed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXd-bP-LGx">
+                    <rect key="frame" x="69" y="498" width="183" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="E4r-v5-YKF"/>
+                        <constraint firstAttribute="width" constant="183" id="fvc-CC-VJK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLU-Em-GGi">
+                    <rect key="frame" x="72" y="322" width="177" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.28932532340808648" blue="0.084378798346315009" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="177" id="ZxR-O6-xJb"/>
+                        <constraint firstAttribute="height" constant="30" id="a7U-9C-NNh"/>
+                    </constraints>
+                    <state key="normal" title="push out tabbar">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="pushNextViewControllerOutTabbar:" destination="-1" eventType="touchUpInside" id="G0g-uc-193"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZQ-aG-f5Z">
+                    <rect key="frame" x="72" y="284" width="177" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6vC-4O-ur9"/>
+                        <constraint firstAttribute="width" constant="177" id="wUe-wj-C5H"/>
+                    </constraints>
+                    <state key="normal" title="push in tabbar">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="pushNextViewControllerInTabbar:" destination="-1" eventType="touchUpInside" id="Zab-ux-3Zv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.45766415091313045" green="0.70367719240837689" blue="0.19878048311223559" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rXd-bP-LGx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ivy-r3-hG7"/>
+                <constraint firstItem="NLU-Em-GGi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JsR-yx-Agc"/>
+                <constraint firstAttribute="bottom" secondItem="rXd-bP-LGx" secondAttribute="bottom" constant="49" id="hej-ve-Pjo"/>
+                <constraint firstAttribute="bottom" secondItem="NLU-Em-GGi" secondAttribute="bottom" constant="216" id="ie7-aQ-xJm"/>
+                <constraint firstItem="OZQ-aG-f5Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="twD-qj-bKr"/>
+                <constraint firstItem="NLU-Em-GGi" firstAttribute="top" secondItem="OZQ-aG-f5Z" secondAttribute="bottom" constant="8" id="yKa-zY-mpv"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="195" y="332"/>
+        </view>
+    </objects>
+</document>

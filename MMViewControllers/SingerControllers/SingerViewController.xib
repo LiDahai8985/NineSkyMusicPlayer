@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingerViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="singer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZ0-Yg-guz">
+                    <rect key="frame" x="100" y="498" width="120" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="c3n-34-iDp"/>
+                        <constraint firstAttribute="width" constant="120" id="rh6-xL-pVn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="isX-ih-iIZ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IVF-bD-OFM"/>
+                        <outlet property="delegate" destination="-1" id="5PA-AI-q5Q"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.56422418949999997" green="0.389948248" blue="0.8075098168" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="eZ0-Yg-guz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0PL-y7-3Wq"/>
+                <constraint firstItem="isX-ih-iIZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BGJ-eP-Ezj"/>
+                <constraint firstAttribute="bottom" secondItem="isX-ih-iIZ" secondAttribute="bottom" id="TSm-5e-TuV"/>
+                <constraint firstAttribute="bottom" secondItem="eZ0-Yg-guz" secondAttribute="bottom" constant="49" id="bvY-hX-Noe"/>
+                <constraint firstAttribute="trailing" secondItem="isX-ih-iIZ" secondAttribute="trailing" id="dRQ-es-kKR"/>
+                <constraint firstItem="isX-ih-iIZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jfI-ZK-vYc"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="461" y="374"/>
+        </view>
+    </objects>
+</document>

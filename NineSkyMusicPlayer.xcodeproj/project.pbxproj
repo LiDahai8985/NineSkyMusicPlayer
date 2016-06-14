@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		742F0CDB1CF7EBAB000704EB /* DiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CC51CF7EBAB000704EB /* DiscViewController.m */; };
+		742F0CDC1CF7EBAB000704EB /* DiscViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742F0CC61CF7EBAB000704EB /* DiscViewController.xib */; };
+		742F0CDD1CF7EBAB000704EB /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CC91CF7EBAB000704EB /* MMNavigationController.m */; };
+		742F0CDE1CF7EBAB000704EB /* MMSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CCB1CF7EBAB000704EB /* MMSuperViewController.m */; };
+		742F0CDF1CF7EBAB000704EB /* MMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CCD1CF7EBAB000704EB /* MMTabBarController.m */; };
+		742F0CE01CF7EBAB000704EB /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CD11CF7EBAB000704EB /* RecommendViewController.m */; };
+		742F0CE11CF7EBAB000704EB /* RecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742F0CD21CF7EBAB000704EB /* RecommendViewController.xib */; };
+		742F0CE21CF7EBAB000704EB /* SingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CD51CF7EBAB000704EB /* SingerViewController.m */; };
+		742F0CE31CF7EBAB000704EB /* SingerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742F0CD61CF7EBAB000704EB /* SingerViewController.xib */; };
+		742F0CE41CF7EBAB000704EB /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CD91CF7EBAB000704EB /* UserViewController.m */; };
+		742F0CE51CF7EBAB000704EB /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742F0CDA1CF7EBAB000704EB /* UserViewController.xib */; };
+		743E7F5B1CFBD0B600299AE6 /* MMPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743E7F591CFBD0B600299AE6 /* MMPlayerView.m */; };
+		743E7F5C1CFBD0B600299AE6 /* MMPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743E7F5A1CFBD0B600299AE6 /* MMPlayerView.xib */; };
+		743E7F5E1CFBD46B00299AE6 /* xinhua_report_placeHolder8_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 743E7F5D1CFBD46B00299AE6 /* xinhua_report_placeHolder8_3@2x.png */; };
+		746081001CF6DA1D0039F293 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 746080FF1CF6DA1D0039F293 /* main.m */; };
+		746081031CF6DA1D0039F293 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 746081021CF6DA1D0039F293 /* AppDelegate.m */; };
+		7460810B1CF6DA1D0039F293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7460810A1CF6DA1D0039F293 /* Assets.xcassets */; };
+		7460810E1CF6DA1D0039F293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7460810C1CF6DA1D0039F293 /* LaunchScreen.storyboard */; };
+		746081761CF6EDCE0039F293 /* tabbar_home_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746081751CF6EDCE0039F293 /* tabbar_home_sel@3x.png */; };
+		746081781CF6EDD50039F293 /* tabbar_home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746081771CF6EDD50039F293 /* tabbar_home@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		742F0CC41CF7EBAB000704EB /* DiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscViewController.h; sourceTree = "<group>"; };
+		742F0CC51CF7EBAB000704EB /* DiscViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscViewController.m; sourceTree = "<group>"; };
+		742F0CC61CF7EBAB000704EB /* DiscViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscViewController.xib; sourceTree = "<group>"; };
+		742F0CC81CF7EBAB000704EB /* MMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNavigationController.h; sourceTree = "<group>"; };
+		742F0CC91CF7EBAB000704EB /* MMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNavigationController.m; sourceTree = "<group>"; };
+		742F0CCA1CF7EBAB000704EB /* MMSuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSuperViewController.h; sourceTree = "<group>"; };
+		742F0CCB1CF7EBAB000704EB /* MMSuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSuperViewController.m; sourceTree = "<group>"; };
+		742F0CCC1CF7EBAB000704EB /* MMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTabBarController.h; sourceTree = "<group>"; };
+		742F0CCD1CF7EBAB000704EB /* MMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTabBarController.m; sourceTree = "<group>"; };
+		742F0CD01CF7EBAB000704EB /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		742F0CD11CF7EBAB000704EB /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		742F0CD21CF7EBAB000704EB /* RecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendViewController.xib; sourceTree = "<group>"; };
+		742F0CD41CF7EBAB000704EB /* SingerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingerViewController.h; sourceTree = "<group>"; };
+		742F0CD51CF7EBAB000704EB /* SingerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingerViewController.m; sourceTree = "<group>"; };
+		742F0CD61CF7EBAB000704EB /* SingerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingerViewController.xib; sourceTree = "<group>"; };
+		742F0CD81CF7EBAB000704EB /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		742F0CD91CF7EBAB000704EB /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		742F0CDA1CF7EBAB000704EB /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		742F0CE71CF7F956000704EB /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		743E7F581CFBD0B600299AE6 /* MMPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPlayerView.h; sourceTree = "<group>"; };
+		743E7F591CFBD0B600299AE6 /* MMPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPlayerView.m; sourceTree = "<group>"; };
+		743E7F5A1CFBD0B600299AE6 /* MMPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMPlayerView.xib; sourceTree = "<group>"; };
+		743E7F5D1CFBD46B00299AE6 /* xinhua_report_placeHolder8_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "xinhua_report_placeHolder8_3@2x.png"; path = "../../云豹的文件/Demos/XinHuaShe/Resources/Images/Placeholder/xinhua_report_placeHolder8_3@2x.png"; sourceTree = "<group>"; };
+		746080FB1CF6DA1D0039F293 /* 九天音乐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "九天音乐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		746080FF1CF6DA1D0039F293 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		746081011CF6DA1D0039F293 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		746081021CF6DA1D0039F293 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7460810A1CF6DA1D0039F293 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7460810D1CF6DA1D0039F293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7460810F1CF6DA1D0039F293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		746081751CF6EDCE0039F293 /* tabbar_home_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_sel@3x.png"; sourceTree = "<group>"; };
+		746081771CF6EDD50039F293 /* tabbar_home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		746080F81CF6DA1D0039F293 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		742F0CC21CF7EBAB000704EB /* MMViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				742F0CC71CF7EBAB000704EB /* MMBaseViewControllers */,
+				742F0CCF1CF7EBAB000704EB /* RecommendControllers */,
+				742F0CC31CF7EBAB000704EB /* DiscControllers */,
+				742F0CD31CF7EBAB000704EB /* SingerControllers */,
+				742F0CD71CF7EBAB000704EB /* UserContrlllers */,
+			);
+			path = MMViewControllers;
+			sourceTree = "<group>";
+		};
+		742F0CC31CF7EBAB000704EB /* DiscControllers */ = {
+			isa = PBXGroup;
+			children = (
+				742F0CC41CF7EBAB000704EB /* DiscViewController.h */,
+				742F0CC51CF7EBAB000704EB /* DiscViewController.m */,
+				742F0CC61CF7EBAB000704EB /* DiscViewController.xib */,
+			);
+			path = DiscControllers;
+			sourceTree = "<group>";
+		};
+		742F0CC71CF7EBAB000704EB /* MMBaseViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				742F0CC81CF7EBAB000704EB /* MMNavigationController.h */,
+				742F0CC91CF7EBAB000704EB /* MMNavigationController.m */,
+				742F0CCA1CF7EBAB000704EB /* MMSuperViewController.h */,
+				742F0CCB1CF7EBAB000704EB /* MMSuperViewController.m */,
+				742F0CCC1CF7EBAB000704EB /* MMTabBarController.h */,
+				742F0CCD1CF7EBAB000704EB /* MMTabBarController.m */,
+			);
+			path = MMBaseViewControllers;
+			sourceTree = "<group>";
+		};
+		742F0CCF1CF7EBAB000704EB /* RecommendControllers */ = {
+			isa = PBXGroup;
+			children = (
+				742F0CD01CF7EBAB000704EB /* RecommendViewController.h */,
+				742F0CD11CF7EBAB000704EB /* RecommendViewController.m */,
+				742F0CD21CF7EBAB000704EB /* RecommendViewController.xib */,
+			);
+			path = RecommendControllers;
+			sourceTree = "<group>";
+		};
+		742F0CD31CF7EBAB000704EB /* SingerControllers */ = {
+			isa = PBXGroup;
+			children = (
+				742F0CD41CF7EBAB000704EB /* SingerViewController.h */,
+				742F0CD51CF7EBAB000704EB /* SingerViewController.m */,
+				742F0CD61CF7EBAB000704EB /* SingerViewController.xib */,
+			);
+			path = SingerControllers;
+			sourceTree = "<group>";
+		};
+		742F0CD71CF7EBAB000704EB /* UserContrlllers */ = {
+			isa = PBXGroup;
+			children = (
+				742F0CD81CF7EBAB000704EB /* UserViewController.h */,
+				742F0CD91CF7EBAB000704EB /* UserViewController.m */,
+				742F0CDA1CF7EBAB000704EB /* UserViewController.xib */,
+			);
+			path = UserContrlllers;
+			sourceTree = "<group>";
+		};
+		742F0CE61CF7F682000704EB /* MMObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MMObjects;
+			sourceTree = "<group>";
+		};
+		743E7F571CFBD0B600299AE6 /* MMControlsAndCategory */ = {
+			isa = PBXGroup;
+			children = (
+				743E7F581CFBD0B600299AE6 /* MMPlayerView.h */,
+				743E7F591CFBD0B600299AE6 /* MMPlayerView.m */,
+				743E7F5A1CFBD0B600299AE6 /* MMPlayerView.xib */,
+			);
+			path = MMControlsAndCategory;
+			sourceTree = "<group>";
+		};
+		746080F21CF6DA1D0039F293 = {
+			isa = PBXGroup;
+			children = (
+				746080FD1CF6DA1D0039F293 /* NineSkyMusicPlayer */,
+				743E7F571CFBD0B600299AE6 /* MMControlsAndCategory */,
+				742F0CC21CF7EBAB000704EB /* MMViewControllers */,
+				742F0CE61CF7F682000704EB /* MMObjects */,
+				746081511CF6E7F40039F293 /* Resources */,
+				746080FC1CF6DA1D0039F293 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		746080FC1CF6DA1D0039F293 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				746080FB1CF6DA1D0039F293 /* 九天音乐.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		746080FD1CF6DA1D0039F293 /* NineSkyMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				746081011CF6DA1D0039F293 /* AppDelegate.h */,
+				746081021CF6DA1D0039F293 /* AppDelegate.m */,
+				742F0CE71CF7F956000704EB /* CommonDefine.h */,
+				7460810A1CF6DA1D0039F293 /* Assets.xcassets */,
+				7460810C1CF6DA1D0039F293 /* LaunchScreen.storyboard */,
+				7460810F1CF6DA1D0039F293 /* Info.plist */,
+				746080FE1CF6DA1D0039F293 /* Supporting Files */,
+			);
+			path = NineSkyMusicPlayer;
+			sourceTree = "<group>";
+		};
+		746080FE1CF6DA1D0039F293 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				746080FF1CF6DA1D0039F293 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		746081511CF6E7F40039F293 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				743E7F5D1CFBD46B00299AE6 /* xinhua_report_placeHolder8_3@2x.png */,
+				746081771CF6EDD50039F293 /* tabbar_home@3x.png */,
+				746081751CF6EDCE0039F293 /* tabbar_home_sel@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		746080FA1CF6DA1D0039F293 /* NineSkyMusicPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 746081121CF6DA1D0039F293 /* Build configuration list for PBXNativeTarget "NineSkyMusicPlayer" */;
+			buildPhases = (
+				746080F71CF6DA1D0039F293 /* Sources */,
+				746080F81CF6DA1D0039F293 /* Frameworks */,
+				746080F91CF6DA1D0039F293 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NineSkyMusicPlayer;
+			productName = NineSkyMusicPlayer;
+			productReference = 746080FB1CF6DA1D0039F293 /* 九天音乐.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		746080F31CF6DA1D0039F293 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = LiDaHai;
+				TargetAttributes = {
+					746080FA1CF6DA1D0039F293 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GJ32TKDWSX;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 746080F61CF6DA1D0039F293 /* Build configuration list for PBXProject "NineSkyMusicPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 746080F21CF6DA1D0039F293;
+			productRefGroup = 746080FC1CF6DA1D0039F293 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				746080FA1CF6DA1D0039F293 /* NineSkyMusicPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		746080F91CF6DA1D0039F293 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				743E7F5C1CFBD0B600299AE6 /* MMPlayerView.xib in Resources */,
+				742F0CE31CF7EBAB000704EB /* SingerViewController.xib in Resources */,
+				743E7F5E1CFBD46B00299AE6 /* xinhua_report_placeHolder8_3@2x.png in Resources */,
+				742F0CE51CF7EBAB000704EB /* UserViewController.xib in Resources */,
+				7460810E1CF6DA1D0039F293 /* LaunchScreen.storyboard in Resources */,
+				7460810B1CF6DA1D0039F293 /* Assets.xcassets in Resources */,
+				742F0CDC1CF7EBAB000704EB /* DiscViewController.xib in Resources */,
+				746081761CF6EDCE0039F293 /* tabbar_home_sel@3x.png in Resources */,
+				742F0CE11CF7EBAB000704EB /* RecommendViewController.xib in Resources */,
+				746081781CF6EDD50039F293 /* tabbar_home@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		746080F71CF6DA1D0039F293 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				746081031CF6DA1D0039F293 /* AppDelegate.m in Sources */,
+				742F0CE41CF7EBAB000704EB /* UserViewController.m in Sources */,
+				742F0CDD1CF7EBAB000704EB /* MMNavigationController.m in Sources */,
+				742F0CDE1CF7EBAB000704EB /* MMSuperViewController.m in Sources */,
+				742F0CDB1CF7EBAB000704EB /* DiscViewController.m in Sources */,
+				746081001CF6DA1D0039F293 /* main.m in Sources */,
+				742F0CE21CF7EBAB000704EB /* SingerViewController.m in Sources */,
+				742F0CE01CF7EBAB000704EB /* RecommendViewController.m in Sources */,
+				742F0CDF1CF7EBAB000704EB /* MMTabBarController.m in Sources */,
+				743E7F5B1CFBD0B600299AE6 /* MMPlayerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7460810C1CF6DA1D0039F293 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7460810D1CF6DA1D0039F293 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		746081101CF6DA1D0039F293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		746081111CF6DA1D0039F293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		746081131CF6DA1D0039F293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = NineSkyMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dahai.dahai;
+				PRODUCT_NAME = "九天音乐";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		746081141CF6DA1D0039F293 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = NineSkyMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dahai.dahai;
+				PRODUCT_NAME = "九天音乐";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		746080F61CF6DA1D0039F293 /* Build configuration list for PBXProject "NineSkyMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				746081101CF6DA1D0039F293 /* Debug */,
+				746081111CF6DA1D0039F293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		746081121CF6DA1D0039F293 /* Build configuration list for PBXNativeTarget "NineSkyMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				746081131CF6DA1D0039F293 /* Debug */,
+				746081141CF6DA1D0039F293 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 746080F31CF6DA1D0039F293 /* Project object */;
+}
