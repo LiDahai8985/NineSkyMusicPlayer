@@ -30,7 +30,7 @@
 }
 
 #pragma mark- Methods
- 
+
 
 
 #pragma mark- UICollectionViewDelegate && UICollectionViewDataSource

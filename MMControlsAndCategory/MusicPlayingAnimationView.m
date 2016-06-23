@@ -86,6 +86,9 @@
         [self.layer addSublayer:midLine];
         [self.layer addSublayer:rightBottomWhiteLine];
         [self.layer addSublayer:rightLine];
+        
+        //防止动画中时进入后台再返回前台是动画停止
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msg_applicationDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     }
     
     return self;
@@ -141,6 +144,10 @@
         midLine.mask.bounds = CGRectMake(0, 0, midLine.frame.size.width, arc4random()%23 + arc4random()%10*0.1);
         rightLine.mask.bounds = CGRectMake(0, 0, rightLine.frame.size.width, arc4random()%6 + arc4random()%10*0.1);
     }
+}
+
+- (void)msg_applicationDidEnterBackground:(NSNotification *)notification {
+    
 }
 
 @end
