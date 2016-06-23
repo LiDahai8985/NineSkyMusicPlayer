@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CommonDefine.h"
 
 @interface MMSuperViewController : UIViewController
 

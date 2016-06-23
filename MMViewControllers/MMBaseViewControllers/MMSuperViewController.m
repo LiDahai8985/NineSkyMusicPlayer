@@ -21,6 +21,9 @@
     //默认允许滑动退出当前页面
     self.allowSwipOut = YES;
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    //默认导航条隐藏
     self.navigationController.navigationBarHidden = YES;
     
 }

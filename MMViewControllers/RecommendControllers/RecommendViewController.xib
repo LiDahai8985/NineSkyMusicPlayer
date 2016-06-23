@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommendViewController">
@@ -25,58 +26,89 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLU-Em-GGi">
-                    <rect key="frame" x="72" y="322" width="177" height="30"/>
-                    <color key="backgroundColor" red="1" green="0.28932532340808648" blue="0.084378798346315009" alpha="1" colorSpace="calibratedRGB"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="10000" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdH-3R-39z">
+                    <rect key="frame" x="0.0" y="19" width="320" height="549"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fq9-UU-Xxx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="177" id="ZxR-O6-xJb"/>
-                        <constraint firstAttribute="height" constant="30" id="a7U-9C-NNh"/>
+                        <constraint firstAttribute="width" secondItem="fq9-UU-Xxx" secondAttribute="height" multiplier="32:13" id="KcE-yn-ONd"/>
                     </constraints>
-                    <state key="normal" title="push out tabbar">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="pushNextViewControllerOutTabbar:" destination="-1" eventType="touchUpInside" id="G0g-uc-193"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZQ-aG-f5Z">
-                    <rect key="frame" x="72" y="284" width="177" height="30"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCY-1T-qCO">
+                    <rect key="frame" x="0.0" y="130" width="320" height="42"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cu8-AS-lmI">
+                            <rect key="frame" x="19" y="39" width="70" height="3"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="evg-F3-wuN"/>
+                                <constraint firstAttribute="width" constant="70" id="zSU-sQ-CxZ"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvv-XA-Kgc">
+                            <rect key="frame" x="1" y="5" width="106" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="新片榜"/>
+                            <connections>
+                                <action selector="subfieldTitleClicked:" destination="-1" eventType="touchUpInside" id="InA-A2-NXN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKa-Km-g5K">
+                            <rect key="frame" x="107" y="5" width="106" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="付费榜"/>
+                            <connections>
+                                <action selector="subfieldTitleClicked:" destination="-1" eventType="touchUpInside" id="gQ2-C9-b8P"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w9-YL-h4L">
+                            <rect key="frame" x="213" y="5" width="106" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="热度榜"/>
+                            <connections>
+                                <action selector="subfieldTitleClicked:" destination="-1" eventType="touchUpInside" id="oUg-hV-1Gj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="6vC-4O-ur9"/>
-                        <constraint firstAttribute="width" constant="177" id="wUe-wj-C5H"/>
+                        <constraint firstItem="2w9-YL-h4L" firstAttribute="width" secondItem="QKa-Km-g5K" secondAttribute="width" id="4hJ-3p-bfq"/>
+                        <constraint firstAttribute="bottom" secondItem="2w9-YL-h4L" secondAttribute="bottom" constant="5" id="74C-HH-dFJ"/>
+                        <constraint firstAttribute="bottom" secondItem="Pvv-XA-Kgc" secondAttribute="bottom" constant="5" id="7ye-km-Ven"/>
+                        <constraint firstItem="QKa-Km-g5K" firstAttribute="width" secondItem="Pvv-XA-Kgc" secondAttribute="width" id="Elv-RX-pwh"/>
+                        <constraint firstItem="Pvv-XA-Kgc" firstAttribute="top" secondItem="DCY-1T-qCO" secondAttribute="top" constant="5" id="FEi-hh-6Ii"/>
+                        <constraint firstItem="QKa-Km-g5K" firstAttribute="top" secondItem="DCY-1T-qCO" secondAttribute="top" constant="5" id="FPq-O2-Mez"/>
+                        <constraint firstItem="Pvv-XA-Kgc" firstAttribute="leading" secondItem="DCY-1T-qCO" secondAttribute="leading" constant="1" id="J2o-CT-0YP"/>
+                        <constraint firstItem="2w9-YL-h4L" firstAttribute="leading" secondItem="QKa-Km-g5K" secondAttribute="trailing" id="bS5-GW-jFW"/>
+                        <constraint firstAttribute="trailing" secondItem="2w9-YL-h4L" secondAttribute="trailing" constant="1" id="cHz-4M-Ra6"/>
+                        <constraint firstAttribute="height" constant="42" id="d7T-88-cGz"/>
+                        <constraint firstAttribute="bottom" secondItem="QKa-Km-g5K" secondAttribute="bottom" constant="5" id="ngc-CJ-GY9"/>
+                        <constraint firstItem="2w9-YL-h4L" firstAttribute="top" secondItem="DCY-1T-qCO" secondAttribute="top" constant="5" id="qsr-Hy-hUg"/>
+                        <constraint firstItem="Cu8-AS-lmI" firstAttribute="centerX" secondItem="Pvv-XA-Kgc" secondAttribute="centerX" id="v1b-xK-TXc"/>
+                        <constraint firstItem="QKa-Km-g5K" firstAttribute="leading" secondItem="Pvv-XA-Kgc" secondAttribute="trailing" id="z5n-s4-wVu"/>
+                        <constraint firstAttribute="bottom" secondItem="Cu8-AS-lmI" secondAttribute="bottom" id="zoj-r8-Zbv"/>
                     </constraints>
-                    <state key="normal" title="push in tabbar">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="0"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <action selector="pushNextViewControllerInTabbar:" destination="-1" eventType="touchUpInside" id="Zab-ux-3Zv"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.45766415091313045" green="0.70367719240837689" blue="0.19878048311223559" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="fq9-UU-Xxx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Fq-07-QMT"/>
+                <constraint firstAttribute="bottom" secondItem="CdH-3R-39z" secondAttribute="bottom" id="E4s-bc-iCh"/>
                 <constraint firstItem="rXd-bP-LGx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ivy-r3-hG7"/>
-                <constraint firstItem="NLU-Em-GGi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JsR-yx-Agc"/>
+                <constraint firstItem="CdH-3R-39z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ujq-Cf-ShC"/>
+                <constraint firstAttribute="trailing" secondItem="CdH-3R-39z" secondAttribute="trailing" id="eAP-fP-mfr"/>
+                <constraint firstAttribute="trailing" secondItem="fq9-UU-Xxx" secondAttribute="trailing" id="fhX-bN-kge"/>
                 <constraint firstAttribute="bottom" secondItem="rXd-bP-LGx" secondAttribute="bottom" constant="49" id="hej-ve-Pjo"/>
-                <constraint firstAttribute="bottom" secondItem="NLU-Em-GGi" secondAttribute="bottom" constant="216" id="ie7-aQ-xJm"/>
-                <constraint firstItem="OZQ-aG-f5Z" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="twD-qj-bKr"/>
-                <constraint firstItem="NLU-Em-GGi" firstAttribute="top" secondItem="OZQ-aG-f5Z" secondAttribute="bottom" constant="8" id="yKa-zY-mpv"/>
+                <constraint firstItem="DCY-1T-qCO" firstAttribute="top" secondItem="fq9-UU-Xxx" secondAttribute="bottom" id="oM5-Y1-Ec5"/>
+                <constraint firstItem="CdH-3R-39z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="qcf-hU-D12"/>
+                <constraint firstItem="DCY-1T-qCO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qeJ-Mc-abc"/>
+                <constraint firstItem="fq9-UU-Xxx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ubK-wQ-tPH"/>
+                <constraint firstAttribute="trailing" secondItem="DCY-1T-qCO" secondAttribute="trailing" id="ueH-Kb-IPD"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="195" y="332"/>
+            <point key="canvasLocation" x="-29" y="72"/>
         </view>
     </objects>
 </document>

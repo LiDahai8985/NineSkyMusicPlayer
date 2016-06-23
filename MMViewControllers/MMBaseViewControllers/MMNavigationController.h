@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MusicPlayingAnimationView.h"
 
 @interface MMNavigationController : UINavigationController<UINavigationControllerDelegate>
 
+/**
+ *  页面右上角动画显示播放状态按钮
+ */
+@property (strong, nonatomic) MusicPlayingAnimationView *rightPlayingView;
 
 @end
 

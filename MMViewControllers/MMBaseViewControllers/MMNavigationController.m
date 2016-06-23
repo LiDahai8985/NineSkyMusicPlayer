@@ -9,11 +9,24 @@
 #import "MMNavigationController.h"
 #import "MMSuperViewController.h"
 
+
 @interface MMNavigationController ()
 
 @property (strong, nonatomic) UIPercentDrivenInteractiveTransition *percentDriven;
+
+/**
+ *  是否是手势交互
+ */
 @property (assign, nonatomic) BOOL isInteractiving;
+
+/**
+ *  是否允许子viewController通过手势滑动pop出页面
+ */
 @property (assign, nonatomic) BOOL isAllowSwipOut;
+
+/**
+ *  当前显示的最上层的viewController
+ */
 @property (strong, nonatomic) UIViewController *mmTopViewController;
 
 @end
@@ -31,8 +44,15 @@
     self.percentDriven = [[UIPercentDrivenInteractiveTransition alloc] init];
     self.delegate = self;
     
+    //添加右上角播放状态按钮
+    [self.rightPlayingView addTarget:self
+                              action:@selector(enterMusicDetail)
+                    forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.rightPlayingView];
+    
     //添加滑动手势
-    [self.view addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizerAction:)]];
+    [self.view addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                                            action:@selector(panGestureRecognizerAction:)]];
 }
 
 - (void )setMmTopViewController:(UIViewController *)mmTopViewController
@@ -45,12 +65,28 @@
     return !([self.mmTopViewController isKindOfClass:[MMSuperViewController class]] && !((MMSuperViewController *)self.mmTopViewController).allowSwipOut);
 }
 
+
+- (MusicPlayingAnimationView *)rightPlayingView {
+    if (!_rightPlayingView) {
+        _rightPlayingView = [[MusicPlayingAnimationView alloc] initWithFrame:CGRectMake(ScreenWidth - 50, 14, 50, 50)];
+        _rightPlayingView.backgroundColor = [UIColor clearColor];
+    }
+    
+    return _rightPlayingView;
+}
+
 /**nav不会将 preferredStatusBarStyle方法调用转给它的子视图,而是由它自己管理状态
  *所以此方法只在nav的子viewController里面写是不行的，要在nav中进行处理
  **/
 //- (UIStatusBarStyle)preferredStatusBarStyle {
 //    return [self.visibleViewController preferredStatusBarStyle];
 //}
+
+#pragma mark- Methods
+
+- (void)enterMusicDetail {
+    [self.rightPlayingView showWithAnimation:YES];
+}
 
 
 #pragma mark-  手势动作处理
@@ -181,7 +217,7 @@
     
     [containerView addSubview:toVC.view];
     [containerView addSubview:fromVC.view];
-
+    
     
     //控制viewController的view的动画移动
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
@@ -190,7 +226,7 @@
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
-
+    
 }
 
 

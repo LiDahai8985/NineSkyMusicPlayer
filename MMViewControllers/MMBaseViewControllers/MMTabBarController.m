@@ -33,6 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -40,7 +42,7 @@
 }
 
 
-#pragma mark- 
+#pragma mark-
 
 //设置tabBar底部items
 - (void)setTabBarItemsAndControllers {
@@ -73,19 +75,22 @@
     }
     
     //ios8之前用此方法
-//    [self.tabBar setSelectedImageTintColor:[UIColor redColor]];
+    //    [self.tabBar setSelectedImageTintColor:[UIColor redColor]];
     
     //设置字体颜色
     self.tabBar.tintColor = [UIColor colorWithRed:1.0 green:75/255.0 blue:20/255.0 alpha:1.0];
     
     //设置背景色
-    self.tabBar.barTintColor = [UIColor colorWithRed:0.9f green:0.91f blue:0.93f alpha:0.8];
+    self.tabBar.barTintColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.99];
+    
     
     //使用自定义shadowImage的前提是使用自定义BackgroundImage，如果backgroundImage是默认的，则shadowImage也是默认效果
-//    [self.tabBar setShadowImage:[UIImage imageNamed:@"xinhua_report_placeHolder8_3"]];
-//    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"xinhua_report_placeHolder8_3"]];
+    //    [self.tabBar setShadowImage:[UIImage imageNamed:@"xinhua_report_placeHolder8_3"]];
+    //    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"xinhua_report_placeHolder8_3"]];
     
     [self setViewControllers:tabBarControllers animated:NO];
+    
+    self.selectedIndex = 1;
 }
 
 #pragma mark-

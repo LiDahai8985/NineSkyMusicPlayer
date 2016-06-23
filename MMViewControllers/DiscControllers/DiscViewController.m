@@ -7,8 +7,11 @@
 //
 
 #import "DiscViewController.h"
+#import "DiscCollectionViewCell.h"
 
-@interface DiscViewController ()
+@interface DiscViewController ()<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -17,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([DiscCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass([DiscCollectionViewCell class])];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -29,6 +34,40 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark- UICollectionViewDelegate && UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 50;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    DiscCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([DiscCollectionViewCell class]) forIndexPath:indexPath];
+    
+    cell.titleLabel.text = [NSString stringWithFormat:@"唱片 -%ld-",(long)indexPath.item];
+    return cell;
+}
+
+#pragma mark- UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return iPhone4?CGSizeMake(95, 113):CGSizeMake(104*ScreenScale, 122*ScreenScale);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return iPhone4?UIEdgeInsetsMake(55, 8, 10, 0):UIEdgeInsetsMake(80*ScreenScale, 7, 30*ScreenScale, 7);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return -3.0;
+}
 #pragma mark- 支持屏幕方向
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {

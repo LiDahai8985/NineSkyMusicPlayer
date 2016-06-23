@@ -1,0 +1,56 @@
+PODS:
+  - AFDownloadRequestOperation (2.0.1):
+    - AFNetworking (~> 2.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - WHCNetWorkKit (0.0.3):
+    - WHCNetWorkKit/NSURLConnection (= 0.0.3)
+    - WHCNetWorkKit/NSURLSession (= 0.0.3)
+    - WHCNetWorkKit/Reachability (= 0.0.3)
+    - WHCNetWorkKit/UIKit (= 0.0.3)
+    - WHCNetWorkKit/UtillKit (= 0.0.3)
+  - WHCNetWorkKit/NSURLConnection (0.0.3):
+    - WHCNetWorkKit/Reachability
+  - WHCNetWorkKit/NSURLSession (0.0.3):
+    - WHCNetWorkKit/NSURLConnection
+  - WHCNetWorkKit/Reachability (0.0.3)
+  - WHCNetWorkKit/UIKit (0.0.3):
+    - WHCNetWorkKit/NSURLConnection
+  - WHCNetWorkKit/UtillKit (0.0.3)
+  - YTKNetwork (1.1.0):
+    - AFDownloadRequestOperation (~> 2.0)
+    - AFNetworking (~> 2.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - WHCNetWorkKit
+  - YTKNetwork
+
+SPEC CHECKSUMS:
+  AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  WHCNetWorkKit: 169c27c8b8008e8f8d679277929777083a2379b9
+  YTKNetwork: a41c1df80d4f3b9d05c19c514a2c604e7a6ac341
+
+PODFILE CHECKSUM: 85c28381cc906497c0a73be02d87d7efb740c6f8
+
+COCOAPODS: 1.0.1

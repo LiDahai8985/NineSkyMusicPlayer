@@ -1,0 +1,9 @@
+platform :ios, '7.0'
+
+target 'NineSkyMusicPlayer' do 
+
+pod 'AFNetworking'
+pod 'YTKNetwork'
+pod 'WHCNetWorkKit'
+
+end
