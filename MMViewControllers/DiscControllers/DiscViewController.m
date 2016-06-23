@@ -8,6 +8,7 @@
 
 #import "DiscViewController.h"
 #import "DiscCollectionViewCell.h"
+#import "DiscDetailViewController.h"
 
 @interface DiscViewController ()<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -28,11 +29,9 @@
     return UIStatusBarStyleLightContent;
 }
 
-#pragma mark-
+#pragma mark- Methods
+ 
 
-- (IBAction) popOutViewController:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 #pragma mark- UICollectionViewDelegate && UICollectionViewDataSource
 
@@ -41,7 +40,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 50;
+    return 150;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,6 +50,10 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    DiscDetailViewController *vc = [[DiscDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 #pragma mark- UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

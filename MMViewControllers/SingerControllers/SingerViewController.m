@@ -9,6 +9,7 @@
 #import "SingerViewController.h"
 #import "CommonDefine.h"
 #import "SingerCollectionViewCell.h"
+#import "SingerDetailViewController.h"
 
 @interface SingerViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -70,6 +71,11 @@
     
     cell.textLabel.text = [NSString stringWithFormat:@"- %ld -",(long)indexPath.item];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    SingerDetailViewController *vc = [[SingerDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark- UICollectionViewDelegateFlowLayout

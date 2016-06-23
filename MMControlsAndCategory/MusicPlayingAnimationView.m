@@ -111,20 +111,20 @@
                 
                 switch (i) {
                     case 0:
-                        anim.fromValue = @(0.8);
+                        anim.fromValue = @(0.5);
                         anim.toValue = @(13);
                         anim.duration = 0.3;
                         [leftLine.mask addAnimation:anim forKey:@"LineAnimation"];
                         break;
                     case 1:
-                        anim.fromValue = @(5);
+                        anim.fromValue = @(0.5);
                         anim.toValue = @(24);
                         anim.duration = 0.4;
                         [midLine.mask addAnimation:anim forKey:@"LineAnimation"];
                         break;
                     case 2:
-                        anim.fromValue = @(0.8);
-                        anim.toValue = @(7.5);
+                        anim.fromValue = @(0.5);
+                        anim.toValue = @(8);
                         anim.duration = 0.3;
                         [rightLine.mask addAnimation:anim forKey:@"LineAnimation"];
                         break;

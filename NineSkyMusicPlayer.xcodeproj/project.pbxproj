@@ -34,6 +34,10 @@
 		74F7FD331D1BD4BB006962F8 /* SingerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F7FD2E1D1BD4BB006962F8 /* SingerCollectionViewCell.xib */; };
 		74F7FD351D1BD5C9006962F8 /* xinhua_report_placeHolder8_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F7FD341D1BD5C9006962F8 /* xinhua_report_placeHolder8_3@2x.png */; };
 		74F7FD4E1D1BD704006962F8 /* RequestCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F7FD471D1BD704006962F8 /* RequestCenter.m */; };
+		74F7FD531D1BDEEF006962F8 /* SingerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F7FD511D1BDEEF006962F8 /* SingerDetailViewController.m */; };
+		74F7FD541D1BDEEF006962F8 /* SingerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F7FD521D1BDEEF006962F8 /* SingerDetailViewController.xib */; };
+		74F7FD5D1D1BDF25006962F8 /* DiscDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F7FD5B1D1BDF25006962F8 /* DiscDetailViewController.m */; };
+		74F7FD5E1D1BDF25006962F8 /* DiscDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F7FD5C1D1BDF25006962F8 /* DiscDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,12 @@
 		74F7FD341D1BD5C9006962F8 /* xinhua_report_placeHolder8_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xinhua_report_placeHolder8_3@2x.png"; sourceTree = "<group>"; };
 		74F7FD461D1BD704006962F8 /* RequestCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestCenter.h; sourceTree = "<group>"; };
 		74F7FD471D1BD704006962F8 /* RequestCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestCenter.m; sourceTree = "<group>"; };
+		74F7FD501D1BDEEF006962F8 /* SingerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingerDetailViewController.h; sourceTree = "<group>"; };
+		74F7FD511D1BDEEF006962F8 /* SingerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingerDetailViewController.m; sourceTree = "<group>"; };
+		74F7FD521D1BDEEF006962F8 /* SingerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingerDetailViewController.xib; sourceTree = "<group>"; };
+		74F7FD5A1D1BDF25006962F8 /* DiscDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscDetailViewController.h; sourceTree = "<group>"; };
+		74F7FD5B1D1BDF25006962F8 /* DiscDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscDetailViewController.m; sourceTree = "<group>"; };
+		74F7FD5C1D1BDF25006962F8 /* DiscDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscDetailViewController.xib; sourceTree = "<group>"; };
 		837A2DDA370CDD544B0C7D2B /* libPods-NineSkyMusicPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NineSkyMusicPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE22CB998F139BCF6E8E8BF1 /* Pods-NineSkyMusicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NineSkyMusicPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NineSkyMusicPlayer/Pods-NineSkyMusicPlayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +118,7 @@
 		742F0CC21CF7EBAB000704EB /* MMViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				74F7FD4F1D1BDEC6006962F8 /* DetailViewController */,
 				742F0CC71CF7EBAB000704EB /* MMBaseViewControllers */,
 				742F0CCF1CF7EBAB000704EB /* RecommendControllers */,
 				742F0CC31CF7EBAB000704EB /* DiscControllers */,
@@ -259,6 +270,19 @@
 			path = NewtWork;
 			sourceTree = "<group>";
 		};
+		74F7FD4F1D1BDEC6006962F8 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74F7FD501D1BDEEF006962F8 /* SingerDetailViewController.h */,
+				74F7FD511D1BDEEF006962F8 /* SingerDetailViewController.m */,
+				74F7FD521D1BDEEF006962F8 /* SingerDetailViewController.xib */,
+				74F7FD5A1D1BDF25006962F8 /* DiscDetailViewController.h */,
+				74F7FD5B1D1BDF25006962F8 /* DiscDetailViewController.m */,
+				74F7FD5C1D1BDF25006962F8 /* DiscDetailViewController.xib */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
 		815C356D70CAC804DAA6CA53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,10 +361,12 @@
 				743E7F5C1CFBD0B600299AE6 /* MMPlayerView.xib in Resources */,
 				74F7FD351D1BD5C9006962F8 /* xinhua_report_placeHolder8_3@2x.png in Resources */,
 				742F0CE31CF7EBAB000704EB /* SingerViewController.xib in Resources */,
+				74F7FD5E1D1BDF25006962F8 /* DiscDetailViewController.xib in Resources */,
 				742F0CE51CF7EBAB000704EB /* UserViewController.xib in Resources */,
 				7460810E1CF6DA1D0039F293 /* LaunchScreen.storyboard in Resources */,
 				7460810B1CF6DA1D0039F293 /* Assets.xcassets in Resources */,
 				742F0CDC1CF7EBAB000704EB /* DiscViewController.xib in Resources */,
+				74F7FD541D1BDEEF006962F8 /* SingerDetailViewController.xib in Resources */,
 				74F7FD331D1BD4BB006962F8 /* SingerCollectionViewCell.xib in Resources */,
 				746081761CF6EDCE0039F293 /* tabbar_home_sel@3x.png in Resources */,
 				742F0CE11CF7EBAB000704EB /* RecommendViewController.xib in Resources */,
@@ -408,10 +434,12 @@
 				742F0CDD1CF7EBAB000704EB /* MMNavigationController.m in Sources */,
 				742F0CDE1CF7EBAB000704EB /* MMSuperViewController.m in Sources */,
 				742F0CDB1CF7EBAB000704EB /* DiscViewController.m in Sources */,
+				74F7FD531D1BDEEF006962F8 /* SingerDetailViewController.m in Sources */,
 				746081001CF6DA1D0039F293 /* main.m in Sources */,
 				74F7FD4E1D1BD704006962F8 /* RequestCenter.m in Sources */,
 				74F7FD321D1BD4BB006962F8 /* SingerCollectionViewCell.m in Sources */,
 				74F7FD2F1D1BD4BB006962F8 /* DiscCollectionViewCell.m in Sources */,
+				74F7FD5D1D1BDF25006962F8 /* DiscDetailViewController.m in Sources */,
 				742F0CE21CF7EBAB000704EB /* SingerViewController.m in Sources */,
 				742F0CE01CF7EBAB000704EB /* RecommendViewController.m in Sources */,
 				742F0CDF1CF7EBAB000704EB /* MMTabBarController.m in Sources */,
