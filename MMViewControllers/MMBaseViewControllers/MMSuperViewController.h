@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CommonDefine.h"
 
 @interface MMSuperViewController : UIViewController
 
-@property (assign, nonatomic) BOOL allowSwipOut;
+@property (assign, nonatomic) BOOL         allowSwipOut;
+
+- (void)showBackgroundImgView;
 
 @end

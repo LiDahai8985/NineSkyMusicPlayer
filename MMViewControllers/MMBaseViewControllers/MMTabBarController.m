@@ -46,15 +46,15 @@
 
 //设置tabBar底部items
 - (void)setTabBarItemsAndControllers {
-    NSArray *itemNamesArray = @[@"推",@"歌",@"人",@"我"];
-    NSArray *itemDeafaultImgArray = @[[[UIImage imageNamed:@"tabbar_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    NSArray *itemSelectedImgArray = @[[[UIImage imageNamed:@"tabbar_home_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_home_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_home_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_home_sel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],];
+    NSArray *itemNamesArray = @[@"推荐",@"唱片",@"音乐人",@"我的"];
+    NSArray *itemDeafaultImgArray = @[[[UIImage imageNamed:@"tabbar_recommend_default"] imageWithRenderingMode:UIImageRenderingModeAutomatic],
+                                      [[UIImage imageNamed:@"tabbar_disc_default"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
+                                      [[UIImage imageNamed:@"tabbar_singer_default"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
+                                      [[UIImage imageNamed:@"tabbar_user_default"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    NSArray *itemSelectedImgArray = @[[[UIImage imageNamed:@"tabbar_recommend_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
+                                      [[UIImage imageNamed:@"tabbar_disc_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
+                                      [[UIImage imageNamed:@"tabbar_singer_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
+                                      [[UIImage imageNamed:@"tabbar_user_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],];
     
     NSArray *viewControllerNamesArray = @[@"RecommendViewController",@"DiscViewController",@"SingerViewController",@"UserViewController",@"DiscViewController"];
     NSMutableArray *tabBarControllers = [[NSMutableArray alloc] init];
@@ -78,7 +78,7 @@
     //    [self.tabBar setSelectedImageTintColor:[UIColor redColor]];
     
     //设置字体颜色
-    self.tabBar.tintColor = [UIColor colorWithRed:1.0 green:75/255.0 blue:20/255.0 alpha:1.0];
+    self.tabBar.tintColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
     
     //设置背景色
     self.tabBar.barTintColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.99];

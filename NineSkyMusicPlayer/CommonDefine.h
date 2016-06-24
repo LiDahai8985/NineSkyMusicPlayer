@@ -7,7 +7,7 @@
 //
 
 
-@class AppDelegate;
+#import "AppDelegate.h"
 
 
 #define MMAppDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])

@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self showBackgroundImgView];
+    
     //***********复合语句写法*************
     [self.view addSubview:({
         

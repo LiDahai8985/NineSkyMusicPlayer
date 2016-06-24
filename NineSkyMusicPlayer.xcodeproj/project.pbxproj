@@ -90,6 +90,7 @@
 		74F7FD5A1D1BDF25006962F8 /* DiscDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscDetailViewController.h; sourceTree = "<group>"; };
 		74F7FD5B1D1BDF25006962F8 /* DiscDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscDetailViewController.m; sourceTree = "<group>"; };
 		74F7FD5C1D1BDF25006962F8 /* DiscDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscDetailViewController.xib; sourceTree = "<group>"; };
+		74FCECFA1D1D0FDE0054D1BC /* NineSkyMusicPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NineSkyMusicPlayer-Prefix.pch"; sourceTree = "<group>"; };
 		837A2DDA370CDD544B0C7D2B /* libPods-NineSkyMusicPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NineSkyMusicPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE22CB998F139BCF6E8E8BF1 /* Pods-NineSkyMusicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NineSkyMusicPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NineSkyMusicPlayer/Pods-NineSkyMusicPlayer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +239,7 @@
 				7460810A1CF6DA1D0039F293 /* Assets.xcassets */,
 				7460810C1CF6DA1D0039F293 /* LaunchScreen.storyboard */,
 				7460810F1CF6DA1D0039F293 /* Info.plist */,
+				74FCECFA1D1D0FDE0054D1BC /* NineSkyMusicPlayer-Prefix.pch */,
 				746080FE1CF6DA1D0039F293 /* Supporting Files */,
 			);
 			path = NineSkyMusicPlayer;
@@ -554,6 +556,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "NineSkyMusicPlayer/NineSkyMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = NineSkyMusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -572,6 +575,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "NineSkyMusicPlayer/NineSkyMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = NineSkyMusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

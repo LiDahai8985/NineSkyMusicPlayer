@@ -23,6 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self showBackgroundImgView];
+    
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([SingerCollectionViewCell class]) bundle:[NSBundle mainBundle]]
           forCellWithReuseIdentifier:NSStringFromClass([SingerCollectionViewCell class])];
 }

@@ -10,6 +10,8 @@
 
 @interface MMSuperViewController ()
 
+@property (strong, nonatomic) UIImageView  *backgroundImgView;
+
 @end
 
 @implementation MMSuperViewController
@@ -22,10 +24,6 @@
     self.allowSwipOut = YES;
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    
-    //默认导航条隐藏
-    self.navigationController.navigationBarHidden = YES;
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -40,6 +38,21 @@
     return NO;
 }
 
+
+- (UIImageView *)backgroundImgView {
+    if (!_backgroundImgView) {
+        _backgroundImgView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _backgroundImgView.backgroundColor = [UIColor clearColor];
+        _backgroundImgView.image = [UIImage imageNamed:@"viewControllerBackgroundImg"];
+    }
+    return _backgroundImgView;
+}
+
+#pragma mark-
+
+- (void)showBackgroundImgView {
+    [self.view insertSubview:self.backgroundImgView atIndex:0];
+}
 
 #pragma mark-
 
