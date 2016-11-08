@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiscViewController">
             <connections>
+                <outlet property="bottomBackgroundImgview" destination="Rvg-wf-AQE" id="8QL-GY-Ubp"/>
                 <outlet property="collectionView" destination="O6R-XR-Hp8" id="6L8-8V-BBa"/>
                 <outlet property="collectionViewLeadingConstraint" destination="N8X-eC-Cwi" id="fIQ-gK-GEn"/>
                 <outlet property="menuTableView" destination="rJ7-lC-Ybg" id="a6M-dZ-2k7"/>
@@ -18,9 +20,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disc_bottom_background" translatesAutoresizingMaskIntoConstraints="NO" id="Rvg-wf-AQE">
+                    <rect key="frame" x="15" y="474" width="290" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Rvg-wf-AQE" secondAttribute="height" multiplier="32:5" constant="2" id="RqQ-23-4Rx"/>
+                    </constraints>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rJ7-lC-Ybg">
-                    <rect key="frame" x="-70" y="0.0" width="70" height="568"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="-70" y="64" width="70" height="504"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="gbp-I3-PnF"/>
                     </constraints>
@@ -31,7 +39,7 @@
                     </connections>
                 </tableView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="O6R-XR-Hp8">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tYY-Ry-fem">
                         <size key="itemSize" width="50" height="50"/>
@@ -78,21 +86,27 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="eoT-9e-P57" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="18Q-Dj-aN7"/>
-                <constraint firstItem="rJ7-lC-Ybg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="21c-Uz-2li"/>
+                <constraint firstItem="rJ7-lC-Ybg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="21c-Uz-2li"/>
                 <constraint firstItem="O6R-XR-Hp8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BeB-Nc-IEA"/>
+                <constraint firstItem="Rvg-wf-AQE" firstAttribute="leading" secondItem="rJ7-lC-Ybg" secondAttribute="trailing" constant="15" id="CS2-sB-idQ"/>
+                <constraint firstItem="Rvg-wf-AQE" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-30" id="IWg-Od-eCH"/>
                 <constraint firstItem="O6R-XR-Hp8" firstAttribute="leading" secondItem="rJ7-lC-Ybg" secondAttribute="trailing" id="Lud-Ka-T3i"/>
                 <constraint firstItem="O6R-XR-Hp8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="N8X-eC-Cwi"/>
+                <constraint firstAttribute="bottom" secondItem="Rvg-wf-AQE" secondAttribute="bottom" constant="49" id="RtH-dZ-73o"/>
                 <constraint firstAttribute="trailing" secondItem="O6R-XR-Hp8" secondAttribute="trailing" id="g1k-8F-BPP"/>
                 <constraint firstAttribute="bottom" secondItem="rJ7-lC-Ybg" secondAttribute="bottom" id="gvH-4f-yrx"/>
-                <constraint firstAttribute="bottom" secondItem="O6R-XR-Hp8" secondAttribute="bottom" id="inp-9U-Y0r"/>
+                <constraint firstAttribute="bottom" secondItem="O6R-XR-Hp8" secondAttribute="bottom" constant="49" id="inp-9U-Y0r"/>
                 <constraint firstItem="eoT-9e-P57" firstAttribute="leading" secondItem="O6R-XR-Hp8" secondAttribute="leading" id="ptp-Ss-UjK"/>
                 <constraint firstItem="eoT-9e-P57" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="t9A-Uc-QBy"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="461" y="374"/>
+            <point key="canvasLocation" x="387" y="376"/>
         </view>
     </objects>
+    <resources>
+        <image name="disc_bottom_background" width="337" height="52"/>
+    </resources>
 </document>

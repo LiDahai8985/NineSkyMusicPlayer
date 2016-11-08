@@ -11,7 +11,7 @@
 @interface MMSuperViewController : UIViewController
 
 @property (assign, nonatomic) BOOL         allowSwipOut;
+@property (strong, nonatomic) UIImageView  *backgroundImgView;
 
-- (void)showBackgroundImgView;
 
 @end

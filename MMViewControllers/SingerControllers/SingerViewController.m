@@ -10,9 +10,11 @@
 #import "CommonDefine.h"
 #import "SingerCollectionViewCell.h"
 #import "SingerDetailViewController.h"
+#import "MMTableSectionIndexView.h"
 
-@interface SingerViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface SingerViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,MMTableSectionIndexViewDelegate>
 
+@property (strong, nonatomic) MMTableSectionIndexView   *sectionIndexView;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
@@ -23,21 +25,42 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self showBackgroundImgView];
+    self.backgroundImgView.hidden = NO;
+    self.backgroundImgView.alpha = 0.6;
     
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([SingerCollectionViewCell class]) bundle:[NSBundle mainBundle]]
           forCellWithReuseIdentifier:NSStringFromClass([SingerCollectionViewCell class])];
 }
 
+- (MMTableSectionIndexView *)sectionIndexView {
+    if (!_sectionIndexView) {
+        _sectionIndexView = [[MMTableSectionIndexView alloc] initWithFrame:CGRectMake(-55, 64, 30 * ScreenScale, ScreenHeight - 64 - 49)];
+        _sectionIndexView.barStyle = UIBarStyleBlack;
+        _sectionIndexView.tableViewIndexDelegate = self;
+        [self.view addSubview:_sectionIndexView];
+    }
+    return _sectionIndexView;
+}
+
+#pragma mark- Methods
+
+
+- (IBAction)showTableSectionIndexView {
+    CGRect rect = self.sectionIndexView.frame;
+    rect.origin.x = rect.origin.x == 0?(-55):0;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.sectionIndexView.frame = rect;
+    }];
+}
 
 #pragma mark- UICollectionViewDelegate && UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 49;
+    return 15;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,7 +117,7 @@
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 5.0;
+    return 15.0;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
@@ -102,6 +125,15 @@
 }
 
 
+#pragma mark-  MMTableSectionIndexViewDelegate
+
+- (void)tableViewIndex:(MMTableSectionIndexView *)tableViewIndex didSelectSectionAtIndex:(NSInteger)index withTitle:(NSString *)title {
+    NSLog(@"-----当前字母序号是:%ld",(long)index);
+}
+
+- (NSArray *)tableViewIndexTitle:(MMTableSectionIndexView *)tableViewIndex {
+    return @[@"推荐",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"];
+}
 #pragma mark-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

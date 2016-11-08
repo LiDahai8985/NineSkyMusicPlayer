@@ -34,7 +34,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -69,9 +68,10 @@
         [item setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} forState:UIControlStateSelected];
         
         MMSuperViewController *controller = [[NSClassFromString(viewControllerNamesArray[i]) alloc] init];
-        MMNavigationController *nav = [[MMNavigationController alloc] initWithRootViewController:controller];
-        [tabBarControllers addObject:nav];
-        nav.tabBarItem = item;
+//        MMNavigationController *nav = [[MMNavigationController alloc] initWithRootViewController:controller];
+//        nav.navigationBarHidden = YES;
+        [tabBarControllers addObject:controller];
+        controller.tabBarItem = item;
     }
     
     //ios8之前用此方法
@@ -83,6 +83,11 @@
     //设置背景色
     self.tabBar.barTintColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.99];
     
+    //显示阴影
+    self.tabBar.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.tabBar.layer.shadowOffset = CGSizeMake(0, 0);
+    self.tabBar.layer.shadowRadius = 5;
+    self.tabBar.layer.shadowOpacity = 1.0;
     
     //使用自定义shadowImage的前提是使用自定义BackgroundImage，如果backgroundImage是默认的，则shadowImage也是默认效果
     //    [self.tabBar setShadowImage:[UIImage imageNamed:@"xinhua_report_placeHolder8_3"]];

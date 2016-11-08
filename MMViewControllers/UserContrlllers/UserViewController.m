@@ -7,8 +7,17 @@
 //
 
 #import "UserViewController.h"
+#import "DownloadCell.h"
+#import "MMDownLoadManager.h"
+#import <MJRefresh.h>
 
-@interface UserViewController ()
+
+@interface UserViewController ()<UITableViewDataSource,UITableViewDelegate,MMDownloadDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *testImgView;
+@property (strong, nonatomic) CALayer *maskLayer;
+@property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -18,30 +27,116 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self showBackgroundImgView];
+    self.backgroundImgView.hidden = NO;
+    self.backgroundImgView.alpha = 0.7;
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.maskLayer = [CALayer layer];
+    self.maskLayer.anchorPoint = CGPointZero;
+    self.maskLayer.bounds = CGRectMake(0, 0, 100, 185);
+    self.maskLayer.backgroundColor = [UIColor redColor].CGColor;
     
-    //***********复合语句写法*************
-    [self.view addSubview:({
-        
-        UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
-        button1.frame = CGRectMake(100, 100, 100, 50);
-        button1.backgroundColor = [UIColor blackColor];
-        [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [button1 setTitle:@"button1" forState:UIControlStateNormal];
-        
-        button1;
-    })];
+    self.testImgView.layer.mask = self.maskLayer;
     
-    int i = ({
-        int y = 1;
-        int z;
-        if (y > 0) z = y;
-        else z = - y;
-        z; });
-    NSLog(@"iiiiiiiiiiii->%d",i);
-    //**************end*******************
+    self.dataArray = [[NSMutableArray alloc] initWithCapacity:0];
+    
+//    for (int i = 0; i < 100;  i++) {
+//        MMDownloadModel *model = [[MMDownloadModel alloc] init];
+//        model.taskId = [NSString stringWithFormat:@"1111111%d.mp4",i];
+//        model.downloadUrl = @"http://baobab.wdjcdn.com/14562919706254.mp4";
+//        model.taskName = [NSString stringWithFormat:@"1111111%d.mp4",i];
+//        model.downloadState = i==0?DownloadStateDownloading:DownloadStateSuspended;
+//        [self.dataArray addObject:model];
+//    }
+    
+    [MMDownLoadManager shareManager].delegate = self;
+    
+    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshTableData)];
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(pullUpRefresh)];
+    self.tableView.mj_footer.automaticallyHidden = NO;
+
+
 }
 
+#pragma mark-
+
+- (void)refreshTableData
+{
+    [self.tableView.mj_header performSelector:@selector(endRefreshing) withObject:nil afterDelay:2];
+}
+
+- (void)pullUpRefresh
+{
+    [self.tableView.mj_footer performSelector:@selector(endRefreshing) withObject:nil afterDelay:2];
+}
+
+#pragma mark- Methods
+- (void) startAnimation:(id)sender
+{
+    //    CABasicAnimation
+    CABasicAnimation *anim = [CABasicAnimation animation];
+    anim.keyPath = @"bounds.size.width";
+    anim.autoreverses = YES;
+    anim.repeatCount = MAXFLOAT;
+    anim.fromValue = @(0.5);
+    anim.toValue = @(200);
+    anim.duration = 0.3;
+    [self.maskLayer addAnimation:anim forKey:@"LineAnimation"];
+}
+
+#pragma mark- UITableViewDelegate && UITableViewDatasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [MMDownLoadManager shareManager].allDownloadArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellId = @"DownloadCell";
+    
+    DownloadCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:cellId owner:nil options:nil] lastObject];
+    }
+    
+    MMDownloadModel *model = [[MMDownLoadManager shareManager].allDownloadArray objectAtIndex:indexPath.row];
+    [cell setcontentWithObject:model];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [self startAnimation:nil];
+    //    MMDownloadModel *model = [[MMDownLoadManager shareManager].allDownloadArray objectAtIndex:indexPath.row];
+//    [[MMDownLoadManager shareManager] downloadTaskWithDownloadModel:model];
+}
+
+
+#pragma mark-
+
+- (IBAction) startAllTask:(id)sender
+{
+    [self startAnimation:nil];
+    //[[MMDownLoadManager shareManager] addToDownloadQueueWithDownloadModels:[MMDownLoadManager shareManager].allDownloadArray];
+}
+
+- (IBAction)pauseAllTask:(id)sender
+{
+    [[MMDownLoadManager shareManager] downloadPauseAllTasks];
+}
+
+#pragma mark-
+- (void)downloadDidReceiveData
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
+}
 
 #pragma mark-
 - (void)didReceiveMemoryWarning {

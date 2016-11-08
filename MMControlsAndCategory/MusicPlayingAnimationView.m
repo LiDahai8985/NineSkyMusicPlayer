@@ -40,7 +40,7 @@
         
         CALayer *leftLineMaskLayer = [CALayer layer];
         leftLineMaskLayer.anchorPoint = CGPointMake(0.5, 1);
-        leftLineMaskLayer.bounds = CGRectMake(0, 0, leftLine.frame.size.width, 6.5);
+        leftLineMaskLayer.bounds = CGRectMake(0, 0, leftLine.frame.size.width, 0);
         leftLineMaskLayer.position = CGPointMake(leftLine.frame.size.width/2, leftLine.frame.size.height);
         leftLineMaskLayer.backgroundColor = LineHighlightColor.CGColor;
         leftLine.mask = leftLineMaskLayer;
@@ -58,7 +58,7 @@
         
         CALayer *midLineMaskLayer = [CALayer layer];
         midLineMaskLayer.anchorPoint = CGPointMake(0.5, 1);
-        midLineMaskLayer.bounds = CGRectMake(0, 0, midLine.frame.size.width, 12);
+        midLineMaskLayer.bounds = CGRectMake(0, 0, midLine.frame.size.width, 0);
         midLineMaskLayer.position = CGPointMake(midLine.frame.size.width/2, midLine.frame.size.height);
         midLineMaskLayer.backgroundColor = LineHighlightColor.CGColor;
         midLine.mask = midLineMaskLayer;
@@ -76,7 +76,7 @@
         
         CALayer *rightLineMaskLayer = [CALayer layer];
         rightLineMaskLayer.anchorPoint = CGPointMake(0.5, 1);
-        rightLineMaskLayer.bounds = CGRectMake(0, 0, rightLine.frame.size.width, 5.5);
+        rightLineMaskLayer.bounds = CGRectMake(0, 0, rightLine.frame.size.width, 0);
         rightLineMaskLayer.position = CGPointMake(rightLine.frame.size.width/2, rightLine.frame.size.height);
         rightLineMaskLayer.backgroundColor = LineHighlightColor.CGColor;
         rightLine.mask = rightLineMaskLayer;

@@ -13,6 +13,11 @@
 
 
 @interface AppDelegate ()
+{
+    NSInteger aa;
+}
+
+@property(assign, nonatomic) UIBackgroundTaskIdentifier backgroundUpdateTask;
 
 @end
 
@@ -26,10 +31,14 @@
     self.window.backgroundColor = [UIColor blackColor];
     
     
-    //打开音频会话，设置为后台可播放模式
-    AVAudioSession *audioSession=[AVAudioSession sharedInstance];
-    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
-    [audioSession setActive:YES error:nil];
+    //打开音频会话
+    NSError *error;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
+    
+    //接受远程的控制通知
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+
     
     MMTabBarController *tabBarController = [[MMTabBarController alloc] init];
     
@@ -50,6 +59,28 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    NSLog(@"begin=============");
+    _backgroundUpdateTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        NSLog(@"系统执行end=============");
+        // 如果在系统规定时间内任务还没有完成，在时间到之前系统会调用到这个方法，一般是10分钟
+        [[UIApplication sharedApplication] endBackgroundTask:_backgroundUpdateTask];
+        _backgroundUpdateTask = UIBackgroundTaskInvalid;
+        
+    }];
+    
+    [self.playerView mmPlayerPlay];
+    //在非主线程开启一个操作在更长时间内执行； 执行的动作
+//    aa =0;
+//    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(go:) userInfo:nil repeats:YES];
+    
+}
+
+- (void)test
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"dsfasfalsdkfjalksdjflksadjflkasdjf");
+    });
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -69,5 +100,28 @@
 - (MMNavigationController *)nav {
     return (MMNavigationController *)self.window.rootViewController;
 }
+
+- (RIVPlayerView *)playerView {
+    if (!_playerView) {
+        _playerView = [RIVPlayerView player];
+        _playerView.allowPlayBackground = YES;
+        _playerView.frame = CGRectMake(0, 0, ScreenWidth, ScreenWidth*9/16);
+    }
+    return _playerView;
+}
+
+
+-(void)go:(NSTimer *)tim
+{
+    NSLog(@"%@==%ld ",[NSDate date],(long)aa);
+    aa++;
+//    if (aa==20) {
+//        NSLog(@"主动执行end=============");
+//        // 如果任务在到达系统给定时间前完成，则主动调用结束后台任务的方法
+//        [[UIApplication sharedApplication] endBackgroundTask:_backgroundUpdateTask];
+//        _backgroundUpdateTask = UIBackgroundTaskInvalid;
+//    }
+}
+
 
 @end

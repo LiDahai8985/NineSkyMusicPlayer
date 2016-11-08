@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RIVPlayerView.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UINavigationController *nav;
+
+@property (strong, nonatomic) RIVPlayerView  *playerView;
 
 @end
 

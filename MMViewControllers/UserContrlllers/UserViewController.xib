@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserViewController">
             <connections>
+                <outlet property="tableView" destination="Ss8-AO-7lM" id="Uo0-oq-sOs"/>
+                <outlet property="testImgView" destination="9WL-CS-II4" id="nfc-vw-ajw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,24 +17,66 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zW4-qH-RXM">
-                    <rect key="frame" x="85" y="498" width="150" height="21"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4G-57-ZeF">
+                    <rect key="frame" x="44" y="84" width="233" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="URL" keyboardAppearance="alert" secureTextEntry="YES"/>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ss8-AO-7lM">
+                    <rect key="frame" x="1" y="0.0" width="319" height="404"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="W5i-VF-8Qa"/>
+                        <outlet property="delegate" destination="-1" id="xcl-y0-uP6"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uji-OC-O2Z">
+                    <rect key="frame" x="21" y="412" width="114" height="30"/>
+                    <color key="backgroundColor" red="0.70196078429999997" green="0.45098039220000002" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="4YV-pl-oUe"/>
-                        <constraint firstAttribute="height" constant="21" id="5wk-nO-WhG"/>
+                        <constraint firstAttribute="width" constant="114" id="TsW-Zf-AYO"/>
+                        <constraint firstAttribute="height" constant="30" id="k8l-Od-xwW"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <state key="normal" title="下载全部">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startAllTask:" destination="-1" eventType="touchUpInside" id="3sK-Ao-Yz6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCc-Bz-hM3">
+                    <rect key="frame" x="182" y="412" width="125" height="30"/>
+                    <color key="backgroundColor" red="0.70196078429999997" green="0.45098039220000002" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="HIV-wa-ZET"/>
+                        <constraint firstAttribute="width" constant="125" id="cPW-ah-lrg"/>
+                    </constraints>
+                    <state key="normal" title="全部暂停">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pauseAllTask:" destination="-1" eventType="touchUpInside" id="Nql-gN-Moj"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="viewControllerBackgroundImg" translatesAutoresizingMaskIntoConstraints="NO" id="9WL-CS-II4">
+                    <rect key="frame" x="8" y="375" width="226" height="185"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.063859840500000001" green="0.68561567170000004" blue="0.8075098168" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="zW4-qH-RXM" secondAttribute="bottom" constant="49" id="GsV-RJ-8lk"/>
-                <constraint firstItem="zW4-qH-RXM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jxx-Jy-f4L"/>
+                <constraint firstAttribute="bottom" secondItem="Ss8-AO-7lM" secondAttribute="bottom" constant="164" id="NgI-R7-0AJ"/>
+                <constraint firstItem="Ss8-AO-7lM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OQA-nn-Sca"/>
+                <constraint firstItem="uji-OC-O2Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="RkF-gW-7FU"/>
+                <constraint firstAttribute="trailing" secondItem="DCc-Bz-hM3" secondAttribute="trailing" constant="13" id="gWa-0Z-dIW"/>
+                <constraint firstItem="DCc-Bz-hM3" firstAttribute="top" secondItem="Ss8-AO-7lM" secondAttribute="bottom" constant="8" id="m4l-5g-B7i"/>
+                <constraint firstItem="uji-OC-O2Z" firstAttribute="top" secondItem="Ss8-AO-7lM" secondAttribute="bottom" constant="8" id="pKw-qB-AbE"/>
+                <constraint firstItem="Ss8-AO-7lM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="uVu-Be-JvV"/>
+                <constraint firstAttribute="trailing" secondItem="Ss8-AO-7lM" secondAttribute="trailing" id="wFG-lh-Qf7"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="461" y="374"/>
+            <point key="canvasLocation" x="393" y="303"/>
         </view>
     </objects>
+    <resources>
+        <image name="viewControllerBackgroundImg" width="375" height="667"/>
+    </resources>
 </document>

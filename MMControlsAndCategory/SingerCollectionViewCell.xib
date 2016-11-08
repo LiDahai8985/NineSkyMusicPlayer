@@ -7,15 +7,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SingerCollectionViewCell" id="gTV-IL-0wX" customClass="SingerCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="133" height="189"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SingerCollectionViewCell" id="gTV-IL-0wX" customClass="SingerCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="135" height="180"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="133" height="189"/>
+                <rect key="frame" x="0.0" y="0.0" width="135" height="180"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W0W-Oq-5g3">
-                        <rect key="frame" x="4" y="4" width="125" height="181"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singer_cell_background" translatesAutoresizingMaskIntoConstraints="NO" id="W0W-Oq-5g3">
+                        <rect key="frame" x="-13" y="0.0" width="140" height="192"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R87-8e-rkI">
+                        <rect key="frame" x="0.0" y="0.0" width="135" height="180"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoe-FF-edX">
                         <rect key="frame" x="26" y="73" width="81" height="44"/>
@@ -31,18 +35,25 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="Yoe-FF-edX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ETU-sg-aDJ"/>
-                <constraint firstAttribute="trailing" secondItem="W0W-Oq-5g3" secondAttribute="trailing" constant="4" id="W2P-sD-xuz"/>
-                <constraint firstAttribute="bottom" secondItem="W0W-Oq-5g3" secondAttribute="bottom" constant="4" id="kwi-dY-hzr"/>
-                <constraint firstItem="W0W-Oq-5g3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="ltH-Ia-JZq"/>
-                <constraint firstItem="Yoe-FF-edX" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="rUl-yX-ABb"/>
-                <constraint firstItem="W0W-Oq-5g3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="wdS-RJ-kaH"/>
+                <constraint firstItem="R87-8e-rkI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0aW-aq-rZ1"/>
+                <constraint firstItem="Yoe-FF-edX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-1" id="ETU-sg-aDJ"/>
+                <constraint firstAttribute="trailing" secondItem="R87-8e-rkI" secondAttribute="trailing" id="FlC-lj-Ylv"/>
+                <constraint firstAttribute="bottom" secondItem="R87-8e-rkI" secondAttribute="bottom" id="ITH-Vg-yeJ"/>
+                <constraint firstItem="R87-8e-rkI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qd9-Gq-XCW"/>
+                <constraint firstAttribute="bottom" secondItem="W0W-Oq-5g3" secondAttribute="bottom" constant="-12" id="SAN-Zl-ztN"/>
+                <constraint firstItem="W0W-Oq-5g3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-13" id="Vn2-SG-Rhy"/>
+                <constraint firstAttribute="trailing" secondItem="W0W-Oq-5g3" secondAttribute="trailing" constant="8" id="geV-pJ-0YW"/>
+                <constraint firstItem="Yoe-FF-edX" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="5" id="rUl-yX-ABb"/>
+                <constraint firstItem="W0W-Oq-5g3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="z2d-Bd-yvh"/>
             </constraints>
-            <size key="customSize" width="133" height="189"/>
+            <size key="customSize" width="139" height="180"/>
             <connections>
                 <outlet property="textLabel" destination="Yoe-FF-edX" id="LCJ-lZ-bi0"/>
             </connections>
-            <point key="canvasLocation" x="431.5" y="205.5"/>
+            <point key="canvasLocation" x="434.5" y="201"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="singer_cell_background" width="154" height="199"/>
+    </resources>
 </document>

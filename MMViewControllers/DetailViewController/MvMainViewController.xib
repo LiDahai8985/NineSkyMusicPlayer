@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MvMainViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6x-Oo-EDP">
+                    <rect key="frame" x="164" y="629" width="46" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="H8T-4W-5hc"/>
+                        <constraint firstAttribute="height" constant="30" id="yor-Z5-lp3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="播放"/>
+                    <connections>
+                        <action selector="playMusic:" destination="-1" eventType="touchUpInside" id="OZl-me-C9a"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiX-3V-IYm">
+                    <rect key="frame" x="94" y="629" width="46" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="NSZ-F1-aPM"/>
+                        <constraint firstAttribute="height" constant="30" id="n1H-9T-95t"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="上一首"/>
+                    <connections>
+                        <action selector="previousMusic:" destination="-1" eventType="touchUpInside" id="XZh-S6-CZ5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45e-O2-OQg">
+                    <rect key="frame" x="235" y="629" width="46" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="fa8-zs-ch9"/>
+                        <constraint firstAttribute="height" constant="30" id="k31-cR-BcJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="下一首"/>
+                    <connections>
+                        <action selector="nextMusic:" destination="-1" eventType="touchUpInside" id="GXV-Au-Ti8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nme-gm-vDS">
+                    <rect key="frame" x="138" y="591" width="98" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0TI-M3-9Y8"/>
+                        <constraint firstAttribute="width" constant="98" id="5V0-Ix-yhy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="视频播放"/>
+                    <connections>
+                        <action selector="playVideo:" destination="-1" eventType="touchUpInside" id="8R8-Wg-kAp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="L6x-Oo-EDP" secondAttribute="bottom" constant="8" id="12W-2a-QKT"/>
+                <constraint firstItem="nme-gm-vDS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6mw-sN-x85"/>
+                <constraint firstItem="L6x-Oo-EDP" firstAttribute="leading" secondItem="oiX-3V-IYm" secondAttribute="trailing" constant="24" id="89N-bA-u52"/>
+                <constraint firstAttribute="bottom" secondItem="oiX-3V-IYm" secondAttribute="bottom" constant="8" id="8aL-Dc-J5Q"/>
+                <constraint firstItem="L6x-Oo-EDP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y1P-mJ-eJ8"/>
+                <constraint firstItem="45e-O2-OQg" firstAttribute="leading" secondItem="oiX-3V-IYm" secondAttribute="trailing" constant="95" id="clj-I4-z0r"/>
+                <constraint firstAttribute="bottom" secondItem="45e-O2-OQg" secondAttribute="bottom" constant="8" id="qMT-Pm-9Cf"/>
+                <constraint firstItem="L6x-Oo-EDP" firstAttribute="top" secondItem="nme-gm-vDS" secondAttribute="bottom" constant="8" id="swy-c8-lwG"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="225.5" y="248.5"/>
+        </view>
+    </objects>
+</document>

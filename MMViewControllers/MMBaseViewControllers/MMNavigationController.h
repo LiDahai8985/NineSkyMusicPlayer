@@ -19,7 +19,7 @@
 @end
 
 
-//push动画
-@interface TransitionPushAnimation : NSObject<UIViewControllerAnimatedTransitioning>
+//pop动画
+@interface TransitionPopAnimation : NSObject<UIViewControllerAnimatedTransitioning>
 
 @end

@@ -5,5 +5,9 @@ target 'NineSkyMusicPlayer' do
 pod 'AFNetworking'
 pod 'YTKNetwork'
 pod 'WHCNetWorkKit'
+pod 'FXBlurView'
+pod 'MJRefresh'
+pod 'XZMRefresh'
+pod 'UMengSocialCOM', '~> 5.2.1'
 
 end

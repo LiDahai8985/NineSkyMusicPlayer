@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		20660F01CEECC1F49BBA3444 /* libPods-NineSkyMusicPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837A2DDA370CDD544B0C7D2B /* libPods-NineSkyMusicPlayer.a */; };
+		7406E6271D4B2BCD00052B85 /* MMDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7406E6261D4B2BCD00052B85 /* MMDownLoadManager.m */; };
+		7406E62A1D4B2CDF00052B85 /* MMDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7406E6291D4B2CDF00052B85 /* MMDownloadRequest.m */; };
+		7414F10C1D225F18008D5C41 /* MMTableSectionIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7414F10B1D225F18008D5C41 /* MMTableSectionIndexView.m */; };
+		7415E1121D41C35800544F62 /* MusicPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7415E1101D41C35800544F62 /* MusicPlayViewController.m */; };
+		7415E1131D41C35800544F62 /* MusicPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7415E1111D41C35800544F62 /* MusicPlayViewController.xib */; };
+		742B5F9A1D2104C6004783CA /* RecommendTopThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B5F981D2104C6004783CA /* RecommendTopThreeCell.m */; };
+		742B5F9B1D2104C6004783CA /* RecommendTopThreeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742B5F991D2104C6004783CA /* RecommendTopThreeCell.xib */; };
+		742B5F9F1D210C34004783CA /* RecommendLaterSevenCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 742B5F9D1D210C34004783CA /* RecommendLaterSevenCell.m */; };
+		742B5FA01D210C34004783CA /* RecommendLaterSevenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742B5F9E1D210C34004783CA /* RecommendLaterSevenCell.xib */; };
 		742F0CDB1CF7EBAB000704EB /* DiscViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CC51CF7EBAB000704EB /* DiscViewController.m */; };
 		742F0CDC1CF7EBAB000704EB /* DiscViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742F0CC61CF7EBAB000704EB /* DiscViewController.xib */; };
 		742F0CDD1CF7EBAB000704EB /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CC91CF7EBAB000704EB /* MMNavigationController.m */; };
@@ -19,14 +28,29 @@
 		742F0CE31CF7EBAB000704EB /* SingerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742F0CD61CF7EBAB000704EB /* SingerViewController.xib */; };
 		742F0CE41CF7EBAB000704EB /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 742F0CD91CF7EBAB000704EB /* UserViewController.m */; };
 		742F0CE51CF7EBAB000704EB /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 742F0CDA1CF7EBAB000704EB /* UserViewController.xib */; };
-		743E7F5B1CFBD0B600299AE6 /* MMPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743E7F591CFBD0B600299AE6 /* MMPlayerView.m */; };
-		743E7F5C1CFBD0B600299AE6 /* MMPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743E7F5A1CFBD0B600299AE6 /* MMPlayerView.xib */; };
+		743E7F5B1CFBD0B600299AE6 /* RIVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 743E7F591CFBD0B600299AE6 /* RIVPlayerView.m */; };
+		743E7F5C1CFBD0B600299AE6 /* RIVPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743E7F5A1CFBD0B600299AE6 /* RIVPlayerView.xib */; };
+		745099161D3737D000EC9E65 /* RIVMusicTableSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 745099141D3737D000EC9E65 /* RIVMusicTableSectionView.m */; };
+		745099171D3737D000EC9E65 /* RIVMusicTableSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745099151D3737D000EC9E65 /* RIVMusicTableSectionView.xib */; };
+		7459CB961D264B9500AF6A4B /* ScrollViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7459CB951D264B9500AF6A4B /* ScrollViewVC.m */; };
+		7459CB9D1D2668FC00AF6A4B /* SubTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7459CB9B1D2668FC00AF6A4B /* SubTableViewController.m */; };
+		7459CB9E1D2668FC00AF6A4B /* SubTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7459CB9C1D2668FC00AF6A4B /* SubTableViewController.xib */; };
+		745D050D1D3F18FA00FB609E /* MvMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745D050B1D3F18FA00FB609E /* MvMainViewController.m */; };
+		745D050E1D3F18FA00FB609E /* MvMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 745D050C1D3F18FA00FB609E /* MvMainViewController.xib */; };
 		746081001CF6DA1D0039F293 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 746080FF1CF6DA1D0039F293 /* main.m */; };
 		746081031CF6DA1D0039F293 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 746081021CF6DA1D0039F293 /* AppDelegate.m */; };
 		7460810B1CF6DA1D0039F293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7460810A1CF6DA1D0039F293 /* Assets.xcassets */; };
 		7460810E1CF6DA1D0039F293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7460810C1CF6DA1D0039F293 /* LaunchScreen.storyboard */; };
 		746081761CF6EDCE0039F293 /* tabbar_home_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746081751CF6EDCE0039F293 /* tabbar_home_sel@3x.png */; };
 		746081781CF6EDD50039F293 /* tabbar_home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746081771CF6EDD50039F293 /* tabbar_home@3x.png */; };
+		74EA05E71D2D171500D31A01 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 74EA05E21D2D171500D31A01 /* README.md */; };
+		74EA05E81D2D171500D31A01 /* UIImage+BlurredFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EA05E41D2D171500D31A01 /* UIImage+BlurredFrame.m */; };
+		74EA05E91D2D171500D31A01 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EA05E61D2D171500D31A01 /* UIImage+ImageEffects.m */; };
+		74EA05EB1D2D18A000D31A01 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74EA05EA1D2D18A000D31A01 /* Accelerate.framework */; };
+		74EA765B1D4CA17800FF4810 /* DownloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EA76591D4CA17800FF4810 /* DownloadCell.m */; };
+		74EA765C1D4CA17800FF4810 /* DownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74EA765A1D4CA17800FF4810 /* DownloadCell.xib */; };
+		74F3B0361D40B46600745C34 /* RIVResourceLoaderURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F3B0331D40B46600745C34 /* RIVResourceLoaderURLConnection.m */; };
+		74F3B0371D40B46600745C34 /* RIVMediaRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F3B0351D40B46600745C34 /* RIVMediaRequestTask.m */; };
 		74F7FD2F1D1BD4BB006962F8 /* DiscCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F7FD281D1BD4BB006962F8 /* DiscCollectionViewCell.m */; };
 		74F7FD301D1BD4BB006962F8 /* DiscCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F7FD291D1BD4BB006962F8 /* DiscCollectionViewCell.xib */; };
 		74F7FD311D1BD4BB006962F8 /* MusicPlayingAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F7FD2B1D1BD4BB006962F8 /* MusicPlayingAnimationView.m */; };
@@ -38,10 +62,30 @@
 		74F7FD541D1BDEEF006962F8 /* SingerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F7FD521D1BDEEF006962F8 /* SingerDetailViewController.xib */; };
 		74F7FD5D1D1BDF25006962F8 /* DiscDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F7FD5B1D1BDF25006962F8 /* DiscDetailViewController.m */; };
 		74F7FD5E1D1BDF25006962F8 /* DiscDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F7FD5C1D1BDF25006962F8 /* DiscDetailViewController.xib */; };
+		74F922181D2DF32800728C3E /* SongListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F922161D2DF32800728C3E /* SongListCell.m */; };
+		74F922191D2DF32800728C3E /* SongListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F922171D2DF32800728C3E /* SongListCell.xib */; };
+		74F9221C1D2E2F8F00728C3E /* BuyDiscTipView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F9221B1D2E2F8F00728C3E /* BuyDiscTipView1.m */; };
+		74F9221E1D2E359500728C3E /* BuyDiscTipView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F9221D1D2E359500728C3E /* BuyDiscTipView1.xib */; };
+		74F922211D2E6FF400728C3E /* BuyDiscTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F922201D2E6FF400728C3E /* BuyDiscTipView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6882D2F61D9439454869AE4E /* Pods-NineSkyMusicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NineSkyMusicPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NineSkyMusicPlayer/Pods-NineSkyMusicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		7406E6251D4B2BCD00052B85 /* MMDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDownLoadManager.h; sourceTree = "<group>"; };
+		7406E6261D4B2BCD00052B85 /* MMDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDownLoadManager.m; sourceTree = "<group>"; };
+		7406E6281D4B2CDF00052B85 /* MMDownloadRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDownloadRequest.h; sourceTree = "<group>"; };
+		7406E6291D4B2CDF00052B85 /* MMDownloadRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDownloadRequest.m; sourceTree = "<group>"; };
+		7414F10A1D225F18008D5C41 /* MMTableSectionIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableSectionIndexView.h; sourceTree = "<group>"; };
+		7414F10B1D225F18008D5C41 /* MMTableSectionIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableSectionIndexView.m; sourceTree = "<group>"; };
+		7415E10F1D41C35800544F62 /* MusicPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayViewController.h; sourceTree = "<group>"; };
+		7415E1101D41C35800544F62 /* MusicPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayViewController.m; sourceTree = "<group>"; };
+		7415E1111D41C35800544F62 /* MusicPlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayViewController.xib; sourceTree = "<group>"; };
+		742B5F971D2104C6004783CA /* RecommendTopThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendTopThreeCell.h; sourceTree = "<group>"; };
+		742B5F981D2104C6004783CA /* RecommendTopThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendTopThreeCell.m; sourceTree = "<group>"; };
+		742B5F991D2104C6004783CA /* RecommendTopThreeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTopThreeCell.xib; sourceTree = "<group>"; };
+		742B5F9C1D210C34004783CA /* RecommendLaterSevenCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendLaterSevenCell.h; sourceTree = "<group>"; };
+		742B5F9D1D210C34004783CA /* RecommendLaterSevenCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendLaterSevenCell.m; sourceTree = "<group>"; };
+		742B5F9E1D210C34004783CA /* RecommendLaterSevenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendLaterSevenCell.xib; sourceTree = "<group>"; };
 		742F0CC41CF7EBAB000704EB /* DiscViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscViewController.h; sourceTree = "<group>"; };
 		742F0CC51CF7EBAB000704EB /* DiscViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscViewController.m; sourceTree = "<group>"; };
 		742F0CC61CF7EBAB000704EB /* DiscViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscViewController.xib; sourceTree = "<group>"; };
@@ -61,10 +105,21 @@
 		742F0CD91CF7EBAB000704EB /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		742F0CDA1CF7EBAB000704EB /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		742F0CE71CF7F956000704EB /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
-		743E7F581CFBD0B600299AE6 /* MMPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPlayerView.h; sourceTree = "<group>"; };
-		743E7F591CFBD0B600299AE6 /* MMPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPlayerView.m; sourceTree = "<group>"; };
-		743E7F5A1CFBD0B600299AE6 /* MMPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMPlayerView.xib; sourceTree = "<group>"; };
-		746080FB1CF6DA1D0039F293 /* 九天音乐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "九天音乐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		743E7F581CFBD0B600299AE6 /* RIVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIVPlayerView.h; sourceTree = "<group>"; };
+		743E7F591CFBD0B600299AE6 /* RIVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIVPlayerView.m; sourceTree = "<group>"; };
+		743E7F5A1CFBD0B600299AE6 /* RIVPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RIVPlayerView.xib; sourceTree = "<group>"; };
+		745099131D3737D000EC9E65 /* RIVMusicTableSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIVMusicTableSectionView.h; sourceTree = "<group>"; };
+		745099141D3737D000EC9E65 /* RIVMusicTableSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIVMusicTableSectionView.m; sourceTree = "<group>"; };
+		745099151D3737D000EC9E65 /* RIVMusicTableSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RIVMusicTableSectionView.xib; sourceTree = "<group>"; };
+		7459CB941D264B9500AF6A4B /* ScrollViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewVC.h; sourceTree = "<group>"; };
+		7459CB951D264B9500AF6A4B /* ScrollViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewVC.m; sourceTree = "<group>"; };
+		7459CB9A1D2668FC00AF6A4B /* SubTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubTableViewController.h; sourceTree = "<group>"; };
+		7459CB9B1D2668FC00AF6A4B /* SubTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubTableViewController.m; sourceTree = "<group>"; };
+		7459CB9C1D2668FC00AF6A4B /* SubTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubTableViewController.xib; sourceTree = "<group>"; };
+		745D050A1D3F18FA00FB609E /* MvMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MvMainViewController.h; sourceTree = "<group>"; };
+		745D050B1D3F18FA00FB609E /* MvMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MvMainViewController.m; sourceTree = "<group>"; };
+		745D050C1D3F18FA00FB609E /* MvMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MvMainViewController.xib; sourceTree = "<group>"; };
+		746080FB1CF6DA1D0039F293 /* Rivendell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rivendell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746080FF1CF6DA1D0039F293 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		746081011CF6DA1D0039F293 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		746081021CF6DA1D0039F293 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +128,19 @@
 		7460810F1CF6DA1D0039F293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		746081751CF6EDCE0039F293 /* tabbar_home_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home_sel@3x.png"; sourceTree = "<group>"; };
 		746081771CF6EDD50039F293 /* tabbar_home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_home@3x.png"; sourceTree = "<group>"; };
+		74EA05E21D2D171500D31A01 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		74EA05E31D2D171500D31A01 /* UIImage+BlurredFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurredFrame.h"; sourceTree = "<group>"; };
+		74EA05E41D2D171500D31A01 /* UIImage+BlurredFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurredFrame.m"; sourceTree = "<group>"; };
+		74EA05E51D2D171500D31A01 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		74EA05E61D2D171500D31A01 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		74EA05EA1D2D18A000D31A01 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		74EA76581D4CA17800FF4810 /* DownloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadCell.h; sourceTree = "<group>"; };
+		74EA76591D4CA17800FF4810 /* DownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
+		74EA765A1D4CA17800FF4810 /* DownloadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
+		74F3B0321D40B46600745C34 /* RIVResourceLoaderURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIVResourceLoaderURLConnection.h; sourceTree = "<group>"; };
+		74F3B0331D40B46600745C34 /* RIVResourceLoaderURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIVResourceLoaderURLConnection.m; sourceTree = "<group>"; };
+		74F3B0341D40B46600745C34 /* RIVMediaRequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIVMediaRequestTask.h; sourceTree = "<group>"; };
+		74F3B0351D40B46600745C34 /* RIVMediaRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIVMediaRequestTask.m; sourceTree = "<group>"; };
 		74F7FD271D1BD4BB006962F8 /* DiscCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscCollectionViewCell.h; sourceTree = "<group>"; };
 		74F7FD281D1BD4BB006962F8 /* DiscCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscCollectionViewCell.m; sourceTree = "<group>"; };
 		74F7FD291D1BD4BB006962F8 /* DiscCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -90,6 +158,14 @@
 		74F7FD5A1D1BDF25006962F8 /* DiscDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscDetailViewController.h; sourceTree = "<group>"; };
 		74F7FD5B1D1BDF25006962F8 /* DiscDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscDetailViewController.m; sourceTree = "<group>"; };
 		74F7FD5C1D1BDF25006962F8 /* DiscDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscDetailViewController.xib; sourceTree = "<group>"; };
+		74F922151D2DF32800728C3E /* SongListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongListCell.h; sourceTree = "<group>"; };
+		74F922161D2DF32800728C3E /* SongListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongListCell.m; sourceTree = "<group>"; };
+		74F922171D2DF32800728C3E /* SongListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongListCell.xib; sourceTree = "<group>"; };
+		74F9221A1D2E2F8F00728C3E /* BuyDiscTipView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyDiscTipView1.h; sourceTree = "<group>"; };
+		74F9221B1D2E2F8F00728C3E /* BuyDiscTipView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyDiscTipView1.m; sourceTree = "<group>"; };
+		74F9221D1D2E359500728C3E /* BuyDiscTipView1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyDiscTipView1.xib; sourceTree = "<group>"; };
+		74F9221F1D2E6FF400728C3E /* BuyDiscTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyDiscTipView.h; sourceTree = "<group>"; };
+		74F922201D2E6FF400728C3E /* BuyDiscTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyDiscTipView.m; sourceTree = "<group>"; };
 		74FCECFA1D1D0FDE0054D1BC /* NineSkyMusicPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NineSkyMusicPlayer-Prefix.pch"; sourceTree = "<group>"; };
 		837A2DDA370CDD544B0C7D2B /* libPods-NineSkyMusicPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NineSkyMusicPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE22CB998F139BCF6E8E8BF1 /* Pods-NineSkyMusicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NineSkyMusicPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NineSkyMusicPlayer/Pods-NineSkyMusicPlayer.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EA05EB1D2D18A000D31A01 /* Accelerate.framework in Frameworks */,
 				20660F01CEECC1F49BBA3444 /* libPods-NineSkyMusicPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +235,10 @@
 				742F0CD01CF7EBAB000704EB /* RecommendViewController.h */,
 				742F0CD11CF7EBAB000704EB /* RecommendViewController.m */,
 				742F0CD21CF7EBAB000704EB /* RecommendViewController.xib */,
+				7406E6251D4B2BCD00052B85 /* MMDownLoadManager.h */,
+				7406E6261D4B2BCD00052B85 /* MMDownLoadManager.m */,
+				7406E6281D4B2CDF00052B85 /* MMDownloadRequest.h */,
+				7406E6291D4B2CDF00052B85 /* MMDownloadRequest.m */,
 			);
 			path = RecommendControllers;
 			sourceTree = "<group>";
@@ -178,6 +259,9 @@
 				742F0CD81CF7EBAB000704EB /* UserViewController.h */,
 				742F0CD91CF7EBAB000704EB /* UserViewController.m */,
 				742F0CDA1CF7EBAB000704EB /* UserViewController.xib */,
+				7459CB9A1D2668FC00AF6A4B /* SubTableViewController.h */,
+				7459CB9B1D2668FC00AF6A4B /* SubTableViewController.m */,
+				7459CB9C1D2668FC00AF6A4B /* SubTableViewController.xib */,
 			);
 			path = UserContrlllers;
 			sourceTree = "<group>";
@@ -192,17 +276,46 @@
 		743E7F571CFBD0B600299AE6 /* MMControlsAndCategory */ = {
 			isa = PBXGroup;
 			children = (
-				743E7F581CFBD0B600299AE6 /* MMPlayerView.h */,
-				743E7F591CFBD0B600299AE6 /* MMPlayerView.m */,
-				743E7F5A1CFBD0B600299AE6 /* MMPlayerView.xib */,
+				74EA05E11D2D171500D31A01 /* UIImage+BlurredFrame */,
+				743E7F581CFBD0B600299AE6 /* RIVPlayerView.h */,
+				743E7F591CFBD0B600299AE6 /* RIVPlayerView.m */,
+				743E7F5A1CFBD0B600299AE6 /* RIVPlayerView.xib */,
+				74F3B0321D40B46600745C34 /* RIVResourceLoaderURLConnection.h */,
+				74F3B0331D40B46600745C34 /* RIVResourceLoaderURLConnection.m */,
+				74F3B0341D40B46600745C34 /* RIVMediaRequestTask.h */,
+				74F3B0351D40B46600745C34 /* RIVMediaRequestTask.m */,
+				745099131D3737D000EC9E65 /* RIVMusicTableSectionView.h */,
+				745099141D3737D000EC9E65 /* RIVMusicTableSectionView.m */,
+				745099151D3737D000EC9E65 /* RIVMusicTableSectionView.xib */,
+				742B5F971D2104C6004783CA /* RecommendTopThreeCell.h */,
+				742B5F981D2104C6004783CA /* RecommendTopThreeCell.m */,
+				742B5F991D2104C6004783CA /* RecommendTopThreeCell.xib */,
+				742B5F9C1D210C34004783CA /* RecommendLaterSevenCell.h */,
+				742B5F9D1D210C34004783CA /* RecommendLaterSevenCell.m */,
+				742B5F9E1D210C34004783CA /* RecommendLaterSevenCell.xib */,
 				74F7FD271D1BD4BB006962F8 /* DiscCollectionViewCell.h */,
 				74F7FD281D1BD4BB006962F8 /* DiscCollectionViewCell.m */,
 				74F7FD291D1BD4BB006962F8 /* DiscCollectionViewCell.xib */,
+				74F922151D2DF32800728C3E /* SongListCell.h */,
+				74F922161D2DF32800728C3E /* SongListCell.m */,
+				74F922171D2DF32800728C3E /* SongListCell.xib */,
 				74F7FD2A1D1BD4BB006962F8 /* MusicPlayingAnimationView.h */,
 				74F7FD2B1D1BD4BB006962F8 /* MusicPlayingAnimationView.m */,
 				74F7FD2C1D1BD4BB006962F8 /* SingerCollectionViewCell.h */,
 				74F7FD2D1D1BD4BB006962F8 /* SingerCollectionViewCell.m */,
 				74F7FD2E1D1BD4BB006962F8 /* SingerCollectionViewCell.xib */,
+				7414F10A1D225F18008D5C41 /* MMTableSectionIndexView.h */,
+				7414F10B1D225F18008D5C41 /* MMTableSectionIndexView.m */,
+				7459CB941D264B9500AF6A4B /* ScrollViewVC.h */,
+				7459CB951D264B9500AF6A4B /* ScrollViewVC.m */,
+				74F9221F1D2E6FF400728C3E /* BuyDiscTipView.h */,
+				74F922201D2E6FF400728C3E /* BuyDiscTipView.m */,
+				74F9221A1D2E2F8F00728C3E /* BuyDiscTipView1.h */,
+				74F9221B1D2E2F8F00728C3E /* BuyDiscTipView1.m */,
+				74F9221D1D2E359500728C3E /* BuyDiscTipView1.xib */,
+				74EA76581D4CA17800FF4810 /* DownloadCell.h */,
+				74EA76591D4CA17800FF4810 /* DownloadCell.m */,
+				74EA765A1D4CA17800FF4810 /* DownloadCell.xib */,
 			);
 			path = MMControlsAndCategory;
 			sourceTree = "<group>";
@@ -225,7 +338,7 @@
 		746080FC1CF6DA1D0039F293 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				746080FB1CF6DA1D0039F293 /* 九天音乐.app */,
+				746080FB1CF6DA1D0039F293 /* Rivendell.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +376,18 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		74EA05E11D2D171500D31A01 /* UIImage+BlurredFrame */ = {
+			isa = PBXGroup;
+			children = (
+				74EA05E21D2D171500D31A01 /* README.md */,
+				74EA05E31D2D171500D31A01 /* UIImage+BlurredFrame.h */,
+				74EA05E41D2D171500D31A01 /* UIImage+BlurredFrame.m */,
+				74EA05E51D2D171500D31A01 /* UIImage+ImageEffects.h */,
+				74EA05E61D2D171500D31A01 /* UIImage+ImageEffects.m */,
+			);
+			path = "UIImage+BlurredFrame";
+			sourceTree = "<group>";
+		};
 		74F7FD361D1BD704006962F8 /* NewtWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +406,12 @@
 				74F7FD5A1D1BDF25006962F8 /* DiscDetailViewController.h */,
 				74F7FD5B1D1BDF25006962F8 /* DiscDetailViewController.m */,
 				74F7FD5C1D1BDF25006962F8 /* DiscDetailViewController.xib */,
+				7415E10F1D41C35800544F62 /* MusicPlayViewController.h */,
+				7415E1101D41C35800544F62 /* MusicPlayViewController.m */,
+				7415E1111D41C35800544F62 /* MusicPlayViewController.xib */,
+				745D050A1D3F18FA00FB609E /* MvMainViewController.h */,
+				745D050B1D3F18FA00FB609E /* MvMainViewController.m */,
+				745D050C1D3F18FA00FB609E /* MvMainViewController.xib */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -288,6 +419,7 @@
 		815C356D70CAC804DAA6CA53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74EA05EA1D2D18A000D31A01 /* Accelerate.framework */,
 				837A2DDA370CDD544B0C7D2B /* libPods-NineSkyMusicPlayer.a */,
 			);
 			name = Frameworks;
@@ -313,7 +445,7 @@
 			);
 			name = NineSkyMusicPlayer;
 			productName = NineSkyMusicPlayer;
-			productReference = 746080FB1CF6DA1D0039F293 /* 九天音乐.app */;
+			productReference = 746080FB1CF6DA1D0039F293 /* Rivendell.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -327,7 +459,7 @@
 				TargetAttributes = {
 					746080FA1CF6DA1D0039F293 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = GJ32TKDWSX;
+						DevelopmentTeam = 5Z5MKT3DP2;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -359,20 +491,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7415E1131D41C35800544F62 /* MusicPlayViewController.xib in Resources */,
 				74F7FD301D1BD4BB006962F8 /* DiscCollectionViewCell.xib in Resources */,
-				743E7F5C1CFBD0B600299AE6 /* MMPlayerView.xib in Resources */,
+				743E7F5C1CFBD0B600299AE6 /* RIVPlayerView.xib in Resources */,
 				74F7FD351D1BD5C9006962F8 /* xinhua_report_placeHolder8_3@2x.png in Resources */,
 				742F0CE31CF7EBAB000704EB /* SingerViewController.xib in Resources */,
 				74F7FD5E1D1BDF25006962F8 /* DiscDetailViewController.xib in Resources */,
+				74EA765C1D4CA17800FF4810 /* DownloadCell.xib in Resources */,
 				742F0CE51CF7EBAB000704EB /* UserViewController.xib in Resources */,
+				74F922191D2DF32800728C3E /* SongListCell.xib in Resources */,
+				745D050E1D3F18FA00FB609E /* MvMainViewController.xib in Resources */,
+				745099171D3737D000EC9E65 /* RIVMusicTableSectionView.xib in Resources */,
 				7460810E1CF6DA1D0039F293 /* LaunchScreen.storyboard in Resources */,
 				7460810B1CF6DA1D0039F293 /* Assets.xcassets in Resources */,
+				7459CB9E1D2668FC00AF6A4B /* SubTableViewController.xib in Resources */,
+				742B5F9B1D2104C6004783CA /* RecommendTopThreeCell.xib in Resources */,
 				742F0CDC1CF7EBAB000704EB /* DiscViewController.xib in Resources */,
 				74F7FD541D1BDEEF006962F8 /* SingerDetailViewController.xib in Resources */,
+				74F9221E1D2E359500728C3E /* BuyDiscTipView1.xib in Resources */,
 				74F7FD331D1BD4BB006962F8 /* SingerCollectionViewCell.xib in Resources */,
 				746081761CF6EDCE0039F293 /* tabbar_home_sel@3x.png in Resources */,
 				742F0CE11CF7EBAB000704EB /* RecommendViewController.xib in Resources */,
 				746081781CF6EDD50039F293 /* tabbar_home@3x.png in Resources */,
+				742B5FA01D210C34004783CA /* RecommendLaterSevenCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,20 +574,39 @@
 			files = (
 				746081031CF6DA1D0039F293 /* AppDelegate.m in Sources */,
 				742F0CE41CF7EBAB000704EB /* UserViewController.m in Sources */,
+				74F3B0361D40B46600745C34 /* RIVResourceLoaderURLConnection.m in Sources */,
+				7406E62A1D4B2CDF00052B85 /* MMDownloadRequest.m in Sources */,
+				74EA765B1D4CA17800FF4810 /* DownloadCell.m in Sources */,
+				7406E6271D4B2BCD00052B85 /* MMDownLoadManager.m in Sources */,
+				74F3B0371D40B46600745C34 /* RIVMediaRequestTask.m in Sources */,
+				745D050D1D3F18FA00FB609E /* MvMainViewController.m in Sources */,
 				742F0CDD1CF7EBAB000704EB /* MMNavigationController.m in Sources */,
 				742F0CDE1CF7EBAB000704EB /* MMSuperViewController.m in Sources */,
+				74EA05E81D2D171500D31A01 /* UIImage+BlurredFrame.m in Sources */,
 				742F0CDB1CF7EBAB000704EB /* DiscViewController.m in Sources */,
+				7414F10C1D225F18008D5C41 /* MMTableSectionIndexView.m in Sources */,
+				7415E1121D41C35800544F62 /* MusicPlayViewController.m in Sources */,
+				7459CB961D264B9500AF6A4B /* ScrollViewVC.m in Sources */,
+				74EA05E91D2D171500D31A01 /* UIImage+ImageEffects.m in Sources */,
 				74F7FD531D1BDEEF006962F8 /* SingerDetailViewController.m in Sources */,
+				74F922181D2DF32800728C3E /* SongListCell.m in Sources */,
+				745099161D3737D000EC9E65 /* RIVMusicTableSectionView.m in Sources */,
 				746081001CF6DA1D0039F293 /* main.m in Sources */,
+				7459CB9D1D2668FC00AF6A4B /* SubTableViewController.m in Sources */,
+				74F922211D2E6FF400728C3E /* BuyDiscTipView.m in Sources */,
 				74F7FD4E1D1BD704006962F8 /* RequestCenter.m in Sources */,
 				74F7FD321D1BD4BB006962F8 /* SingerCollectionViewCell.m in Sources */,
 				74F7FD2F1D1BD4BB006962F8 /* DiscCollectionViewCell.m in Sources */,
 				74F7FD5D1D1BDF25006962F8 /* DiscDetailViewController.m in Sources */,
 				742F0CE21CF7EBAB000704EB /* SingerViewController.m in Sources */,
 				742F0CE01CF7EBAB000704EB /* RecommendViewController.m in Sources */,
+				742B5F9F1D210C34004783CA /* RecommendLaterSevenCell.m in Sources */,
 				742F0CDF1CF7EBAB000704EB /* MMTabBarController.m in Sources */,
 				74F7FD311D1BD4BB006962F8 /* MusicPlayingAnimationView.m in Sources */,
-				743E7F5B1CFBD0B600299AE6 /* MMPlayerView.m in Sources */,
+				743E7F5B1CFBD0B600299AE6 /* RIVPlayerView.m in Sources */,
+				74EA05E71D2D171500D31A01 /* README.md in Sources */,
+				74F9221C1D2E2F8F00728C3E /* BuyDiscTipView1.m in Sources */,
+				742B5F9A1D2104C6004783CA /* RecommendTopThreeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +645,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -530,6 +691,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -554,15 +716,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LiDaHai Li (RD28A5H9PH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LiDaHai Li (RD28A5H9PH)";
 				GCC_PREFIX_HEADER = "NineSkyMusicPlayer/NineSkyMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = NineSkyMusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dahai.dahai;
-				PRODUCT_NAME = "九天音乐";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lljz.ninesky;
+				PRODUCT_NAME = Rivendell;
+				PROVISIONING_PROFILE = "0f960f6f-51b5-4be0-9222-0366a1a000cf";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -573,15 +735,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: LiDaHai Li (RD28A5H9PH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LiDaHai Li (RD28A5H9PH)";
 				GCC_PREFIX_HEADER = "NineSkyMusicPlayer/NineSkyMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = NineSkyMusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dahai.dahai;
-				PRODUCT_NAME = "九天音乐";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lljz.ninesky;
+				PRODUCT_NAME = Rivendell;
+				PROVISIONING_PROFILE = "0f960f6f-51b5-4be0-9222-0366a1a000cf";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

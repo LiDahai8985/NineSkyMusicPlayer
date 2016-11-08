@@ -40,6 +40,8 @@
     //默认隐藏导航条
     self.navigationBarHidden = YES;
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     //控制器切换controller到控制对象
     self.percentDriven = [[UIPercentDrivenInteractiveTransition alloc] init];
     self.delegate = self;
@@ -96,7 +98,7 @@
     UIView* view = self.view;
     CGPoint translation = [gestureRecognizer translationInView:gestureRecognizer.view];
     
-    NSLog(@"\n----->panGestureRecognizerAction<-----\n----->mmTopViewController----->:%@\n----->topViewController----->:%@\n----->velocityInView----->:%f\n----->translation----->:%f",NSStringFromClass([self.mmTopViewController class]),NSStringFromClass([self.topViewController class]),[gestureRecognizer velocityInView:view].x,translation.x);
+    //NSLog(@"\n----->panGestureRecognizerAction<-----\n----->mmTopViewController----->:%@\n----->topViewController----->:%@\n----->velocityInView----->:%f\n----->translation----->:%f",NSStringFromClass([self.mmTopViewController class]),NSStringFromClass([self.topViewController class]),[gestureRecognizer velocityInView:view].x,translation.x);
     
     switch (gestureRecognizer.state) {
         case UIGestureRecognizerStateBegan: {
@@ -133,7 +135,7 @@
             self.isInteractiving = NO;
             CGFloat fraction = fabs(translation.x / view.bounds.size.width);
             
-            //当滑动很快或者华东距离大于一般屏幕距离时执行pop操作，否则返回原状态
+            //当滑动很快或者华东距离大于屏幕宽度一半距离时执行pop操作，否则返回原状态
             
             if (self.isAllowSwipOut && (fraction > 0.5 || [gestureRecognizer velocityInView:view].x >180)) {
                 [self.percentDriven finishInteractiveTransition];
@@ -157,7 +159,7 @@
                                                   toViewController:(UIViewController *)toVC
 {
     if (operation == UINavigationControllerOperationPop) {
-        return [[TransitionPushAnimation alloc] init];
+        return [[TransitionPopAnimation alloc] init];
     }
     return nil;
 }
@@ -190,7 +192,7 @@
 
 
 
-@implementation TransitionPushAnimation
+@implementation TransitionPopAnimation
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
@@ -199,7 +201,7 @@
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    //－－－－－－－正常push pop效果－－－－－－－
+    //－－－－－－－正常pop效果－－－－－－－
     
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
@@ -219,11 +221,13 @@
     [containerView addSubview:fromVC.view];
     
     
-    //控制viewController的view的动画移动
+    //控制viewController的view动画移动
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         toVC.view.frame  = [transitionContext finalFrameForViewController:toVC];
         fromVC.view.frame = CGRectMake(fromVC.view.frame.size.width, 0, fromVC.view.frame.size.width, fromVC.view.frame.size.height);
     } completion:^(BOOL finished) {
+        
+        // 执行到最后必须调用此方法，以更新转场动作各个状态
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
     

@@ -22,6 +22,9 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FXBlurView (1.6.4)
+  - MJRefresh (3.1.9)
+  - UMengSocialCOM (5.2.1)
   - WHCNetWorkKit (0.0.3):
     - WHCNetWorkKit/NSURLConnection (= 0.0.3)
     - WHCNetWorkKit/NSURLSession (= 0.0.3)
@@ -36,21 +39,30 @@ PODS:
   - WHCNetWorkKit/UIKit (0.0.3):
     - WHCNetWorkKit/NSURLConnection
   - WHCNetWorkKit/UtillKit (0.0.3)
+  - XZMRefresh (1.1.3)
   - YTKNetwork (1.1.0):
     - AFDownloadRequestOperation (~> 2.0)
     - AFNetworking (~> 2.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - FXBlurView
+  - MJRefresh
+  - UMengSocialCOM (~> 5.2.1)
   - WHCNetWorkKit
+  - XZMRefresh
   - YTKNetwork
 
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
+  MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
+  UMengSocialCOM: 074c135ce349aa4c8848d3fb8458757bcb6ffb67
   WHCNetWorkKit: 169c27c8b8008e8f8d679277929777083a2379b9
+  XZMRefresh: 2c0f1b70d9fe97a1d0286373e29986d44f0a7b1a
   YTKNetwork: a41c1df80d4f3b9d05c19c514a2c604e7a6ac341
 
-PODFILE CHECKSUM: 85c28381cc906497c0a73be02d87d7efb740c6f8
+PODFILE CHECKSUM: 3f6fb1434826de15f0e6c57ab86a00d4a8550a0f
 
 COCOAPODS: 1.0.1

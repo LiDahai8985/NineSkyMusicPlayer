@@ -7,8 +7,11 @@
 //
 
 #import "SingerDetailViewController.h"
+#import "MMTableSectionIndexView.h"
 
-@interface SingerDetailViewController ()
+@interface SingerDetailViewController ()<MMTableSectionIndexViewDelegate,UIAlertViewDelegate>
+
+@property (strong, nonatomic) MMTableSectionIndexView   *sectionIndexView;
 
 @end
 
@@ -17,21 +20,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    _sectionIndexView = [[MMTableSectionIndexView alloc] initWithFrame:CGRectMake(0, 64, 30 * ScreenScale, ScreenHeight - 64 - 49)];
+    _sectionIndexView.barStyle = UIBarStyleBlack;
+    _sectionIndexView.tableViewIndexDelegate = self;
+    [self.view addSubview:_sectionIndexView];
+    
 }
+
+#pragma mark-  MMTableSectionIndexViewDelegate
+
+- (void)tableViewIndex:(MMTableSectionIndexView *)tableViewIndex didSelectSectionAtIndex:(NSInteger)index withTitle:(NSString *)title {
+    NSLog(@"-----当前字母序号是:%ld",(long)index);
+}
+
+- (NSArray *)tableViewIndexTitle:(MMTableSectionIndexView *)tableViewIndex {
+    return @[@"推荐",@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"];
+}
+
+#pragma mark-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

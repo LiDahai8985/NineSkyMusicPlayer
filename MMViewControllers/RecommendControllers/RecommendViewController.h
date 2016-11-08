@@ -10,4 +10,6 @@
 
 @interface RecommendViewController : MMSuperViewController
 
+@property (strong, nonatomic) NSString *notificationId;
+
 @end

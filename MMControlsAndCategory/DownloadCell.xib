@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DownloadCell" rowHeight="76" id="KGk-i7-Jjw" customClass="DownloadCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BCF-JU-J0u">
+                        <rect key="frame" x="13" y="64" width="270" height="2"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="progressTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0M/0.0M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cl4-T5-RAf">
+                        <rect key="frame" x="13" y="40" width="173" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="WXq-eB-SUf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCK-Os-8d8">
+                        <rect key="frame" x="13" y="8" width="222" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="fCK-Os-8d8" secondAttribute="bottom" constant="27" id="1Fe-2B-2YZ"/>
+                    <constraint firstItem="fCK-Os-8d8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="75c-Qp-uYm"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Cl4-T5-RAf" secondAttribute="trailing" constant="126" id="GZd-B2-WX9"/>
+                    <constraint firstAttribute="topMargin" secondItem="fCK-Os-8d8" secondAttribute="top" id="WAs-6d-7De"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="BCF-JU-J0u" secondAttribute="bottom" constant="2" id="dBO-v0-Me0"/>
+                    <constraint firstItem="BCF-JU-J0u" firstAttribute="top" secondItem="Cl4-T5-RAf" secondAttribute="bottom" constant="3" id="fUa-UV-CQq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fCK-Os-8d8" secondAttribute="trailing" constant="77" id="hJ7-4D-Tpo"/>
+                    <constraint firstItem="BCF-JU-J0u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="i0j-zO-FN2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="BCF-JU-J0u" secondAttribute="trailing" constant="29" id="kka-SA-hRm"/>
+                    <constraint firstItem="Cl4-T5-RAf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="w1u-4I-6R7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lengthLabel" destination="Cl4-T5-RAf" id="EIa-6P-6nc"/>
+                <outlet property="nameLabel" destination="fCK-Os-8d8" id="cZg-Gx-Ze4"/>
+                <outlet property="progressView" destination="BCF-JU-J0u" id="mtN-3i-hZF"/>
+            </connections>
+            <point key="canvasLocation" x="417" y="439"/>
+        </tableViewCell>
+    </objects>
+</document>
