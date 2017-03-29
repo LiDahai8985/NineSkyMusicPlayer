@@ -50,10 +50,10 @@
                                       [[UIImage imageNamed:@"tabbar_disc_default"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
                                       [[UIImage imageNamed:@"tabbar_singer_default"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
                                       [[UIImage imageNamed:@"tabbar_user_default"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    NSArray *itemSelectedImgArray = @[[[UIImage imageNamed:@"tabbar_recommend_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_disc_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_singer_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
-                                      [[UIImage imageNamed:@"tabbar_user_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],];
+    NSArray *itemSelectedImgArray = @[[[UIImage imageNamed:@"no_comment"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
+                                      [[UIImage imageNamed:@"no_comment"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
+                                      [[UIImage imageNamed:@"no_comment"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],
+                                      [[UIImage imageNamed:@"no_comment"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal],];
     
     NSArray *viewControllerNamesArray = @[@"RecommendViewController",@"DiscViewController",@"SingerViewController",@"UserViewController",@"DiscViewController"];
     NSMutableArray *tabBarControllers = [[NSMutableArray alloc] init];

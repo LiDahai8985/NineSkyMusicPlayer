@@ -13,11 +13,13 @@
 #import "RecommendLaterSevenCell.h"
 #import "MMDownLoadManager.h"
 
+
 @interface RecommendViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,MMDownloadDelegate>
 {
     NSInteger currentPage;
     BOOL      isAlready;
-    AFDownloadRequestOperation *requestOperation;
+    //AFDownloadRequestOperation *requestOperation;
+    
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *newestBtn;
@@ -44,7 +46,6 @@
 
     
     self.sliderLineLeadingConstranit.constant = (ScreenWidth-2)/3.0/2.0+1-35;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

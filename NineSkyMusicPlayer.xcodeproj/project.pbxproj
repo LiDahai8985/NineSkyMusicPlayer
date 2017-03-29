@@ -547,7 +547,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EDB2619DAD9CAF81F1FE425E /* [CP] Copy Pods Resources */ = {
@@ -718,13 +718,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: LiDaHai Li (RD28A5H9PH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LiDaHai Li (RD28A5H9PH)";
+				DEVELOPMENT_TEAM = 5Z5MKT3DP2;
 				GCC_PREFIX_HEADER = "NineSkyMusicPlayer/NineSkyMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = NineSkyMusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lljz.ninesky;
 				PRODUCT_NAME = Rivendell;
-				PROVISIONING_PROFILE = "0f960f6f-51b5-4be0-9222-0366a1a000cf";
+				PROVISIONING_PROFILE = "0f1da397-62ae-4593-9424-1eed5dd14b3f";
+				PROVISIONING_PROFILE_SPECIFIER = NineSky_Dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -737,13 +739,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: LiDaHai Li (RD28A5H9PH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LiDaHai Li (RD28A5H9PH)";
+				DEVELOPMENT_TEAM = 5Z5MKT3DP2;
 				GCC_PREFIX_HEADER = "NineSkyMusicPlayer/NineSkyMusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = NineSkyMusicPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lljz.ninesky;
 				PRODUCT_NAME = Rivendell;
-				PROVISIONING_PROFILE = "0f960f6f-51b5-4be0-9222-0366a1a000cf";
+				PROVISIONING_PROFILE = "0f1da397-62ae-4593-9424-1eed5dd14b3f";
+				PROVISIONING_PROFILE_SPECIFIER = NineSky_Dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

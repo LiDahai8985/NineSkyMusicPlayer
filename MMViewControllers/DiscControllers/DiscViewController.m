@@ -10,9 +10,12 @@
 #import "DiscCollectionViewCell.h"
 #import "DiscDetailViewController.h"
 #import "XZMRefresh.h"
+#import "ios-ntp.h"
 
-@interface DiscViewController ()<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
-
+@interface DiscViewController ()<UICollectionViewDelegateFlowLayout,UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource,NetAssociationDelegate,CAAnimationDelegate>
+{
+    NetAssociation *netAssociation;
+}
 @property (strong, nonatomic) IBOutlet UICollectionView   *collectionView;
 @property (strong, nonatomic) IBOutlet UITableView        *menuTableView;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *collectionViewLeadingConstraint;
@@ -50,6 +53,10 @@
     [self.collectionView.xzm_gifFooter setImages:@[] forState:XZMRefreshStateRefreshing];
     self.collectionView.xzm_footer.statusLabel.backgroundColor = [UIColor redColor];
     self.collectionView.xzm_footer.activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+    
+    netAssociation = [[NetAssociation alloc]
+                      initWithServerName:@"time.apple.com"];
+    netAssociation.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -79,6 +86,21 @@
         self.collectionViewLeadingConstraint.constant = self.collectionViewLeadingConstraint.constant == 70?0:70;
         [self.view layoutIfNeeded];
     }];
+    
+    
+    [netAssociation sendTimeQuery];
+    
+    NetworkClock * nc = [NetworkClock sharedNetworkClock];
+    NSDate * nt = nc.networkTime;
+    
+    NSDateFormatter *fomatter = [[NSDateFormatter alloc] init];
+    [fomatter setDateFormat:@"yyyy-MM-dd HH:mm:ss zzz"];
+    
+    NSLog(@"-----获取的服务器时间：%@ 时差：%f",[fomatter stringFromDate:nt],nc.networkOffset);
+}
+
+- (void) reportFromDelegate {
+    NSLog(@"time offset: %5.3f mSec", netAssociation.offset * 1000.0);
 }
 
 //唱片列表背景
